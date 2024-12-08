@@ -1,4 +1,4 @@
-import CategoryTemplate from "@/app/ui/categories-utils/CategoryTemplate";
+import CategoryTemplate from "@/app/ui/categories-components/CategoryTemplate";
 import { Metadata } from "next";
 import React from "react";
 
