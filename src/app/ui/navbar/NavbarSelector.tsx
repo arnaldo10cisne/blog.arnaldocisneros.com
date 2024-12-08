@@ -3,9 +3,11 @@
 import { NavbarLinkModel } from "@/app/lib/models";
 import React, { useState } from "react";
 import NavbarLink from "./NavbarLink";
+import styles from "./NavbarSelector.module.scss";
 
 export interface NavbarSelectorProps {
   label: string;
+  href: string;
   optionsList: NavbarLinkModel[];
 }
 
@@ -17,6 +19,7 @@ const NavbarSelector = ({ label, optionsList }: NavbarSelectorProps) => {
 
   return (
     <div
+      className={styles.Selector}
       onMouseEnter={() => {
         toggleDropdownMenu(true);
       }}
@@ -24,15 +27,13 @@ const NavbarSelector = ({ label, optionsList }: NavbarSelectorProps) => {
         toggleDropdownMenu(false);
       }}
     >
-      <button>{label}</button>
+      {label}
       {isOpen ? (
-        <ul>
-          <li>
-            {optionsList.map((option, index) => (
-              <NavbarLink key={index} {...option} />
-            ))}
-          </li>
-        </ul>
+        <div className={styles.OptionsList}>
+          {optionsList.map((option, index) => (
+            <NavbarLink key={index} {...option} isSelectorOption={true} />
+          ))}
+        </div>
       ) : null}
     </div>
   );

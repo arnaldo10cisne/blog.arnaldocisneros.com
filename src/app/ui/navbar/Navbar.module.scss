@@ -1,0 +1,19 @@
+.Navbar {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 0 100px;
+  color: white;
+}
+
+.Navbar_LinksContainer {
+  display: flex;
+  margin-left: auto;
+}

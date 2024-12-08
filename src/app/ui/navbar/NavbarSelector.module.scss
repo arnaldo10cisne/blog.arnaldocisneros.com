@@ -1,0 +1,19 @@
+@import "../variables";
+
+.Selector {
+  padding: 15px 40px 15px 10px;
+  position: relative;
+  height: $navbar-link-height;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.OptionsList {
+  position: absolute;
+  display: flex;
+  top: $navbar-link-height;
+  flex-direction: column;
+  width: 200px;
+}

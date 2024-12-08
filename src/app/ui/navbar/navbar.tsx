@@ -2,6 +2,7 @@ import React from "react";
 import NavbarLink from "./NavbarLink";
 import { NavbarLinkModel } from "@/app/lib/models";
 import NavbarSelector, { NavbarSelectorProps } from "./NavbarSelector";
+import styles from "./Navbar.module.scss";
 
 const HOME_LINK: NavbarLinkModel = {
   label: "HOME",
@@ -20,6 +21,7 @@ const ABOUT_LINK: NavbarLinkModel = {
 
 const CATEGORIES_SELECTOR: NavbarSelectorProps = {
   label: "CATEGORIES",
+  href: "/categories",
   optionsList: [
     {
       label: "DEVELOPING",
@@ -50,11 +52,11 @@ const CATEGORIES_SELECTOR: NavbarSelectorProps = {
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className={styles.Navbar}>
       <div>LOGO</div>
       <div>SOCIAL MEDIA LINKS</div>
       <div>SEARCH BAR</div>
-      <div>
+      <div className={styles.Navbar_LinksContainer}>
         <NavbarLink {...HOME_LINK} />
         <NavbarSelector {...CATEGORIES_SELECTOR} />
         <NavbarLink {...LATESTS_POSTS_LINK} />

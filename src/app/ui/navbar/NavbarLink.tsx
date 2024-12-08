@@ -6,7 +6,12 @@ import { usePathname } from "next/navigation";
 import styles from "./NavbarLink.module.scss";
 import { NavbarLinkModel } from "@/app/lib/models";
 
-const NavbarLink = ({ label, href, newTab = false }: NavbarLinkModel) => {
+const NavbarLink = ({
+  label,
+  href,
+  newTab = false,
+  isSelectorOption = false,
+}: NavbarLinkModel) => {
   const pathname = usePathname();
   const isCurrent: boolean = pathname === href;
 
@@ -14,7 +19,7 @@ const NavbarLink = ({ label, href, newTab = false }: NavbarLinkModel) => {
     <Link
       key={label}
       href={href}
-      className={`${isCurrent ? styles.isCurrent : ""}`}
+      className={`${styles.Link} ${isCurrent && !isSelectorOption ? styles.isCurrent : null} ${isSelectorOption ? styles.isSelectorOption : null}`}
       target={newTab ? "_blank" : "_self"}
     >
       {label}
