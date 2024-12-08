@@ -4,14 +4,14 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./NavbarLink.module.scss";
-import { NavbarLinkModel } from "@/app/lib/models";
+import { NavigationLinkModel } from "@/app/lib/models";
 
 const NavbarLink = ({
   label,
   href,
   newTab = false,
   isSelectorOption = false,
-}: NavbarLinkModel) => {
+}: NavigationLinkModel) => {
   const pathname = usePathname();
   const isCurrent: boolean = pathname === href;
 

@@ -1,17 +1,16 @@
 "use client";
 
-import { NavbarLinkModel } from "@/app/lib/models";
+import { NavigationLinkModel } from "@/app/lib/models";
 import React, { useState } from "react";
 import NavbarLink from "./NavbarLink";
 import styles from "./NavbarSelector.module.scss";
 
 export interface NavbarSelectorProps {
-  label: string;
-  href: string;
-  optionsList: NavbarLinkModel[];
+  link: NavigationLinkModel;
+  optionsList: NavigationLinkModel[];
 }
 
-const NavbarSelector = ({ label, optionsList }: NavbarSelectorProps) => {
+const NavbarSelector = ({ link, optionsList }: NavbarSelectorProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleDropdownMenu = (option: boolean) => {
     setIsOpen(option);
@@ -27,7 +26,7 @@ const NavbarSelector = ({ label, optionsList }: NavbarSelectorProps) => {
         toggleDropdownMenu(false);
       }}
     >
-      {label}
+      <NavbarLink {...link} />
       {isOpen ? (
         <div className={styles.OptionsList}>
           {optionsList.map((option, index) => (
