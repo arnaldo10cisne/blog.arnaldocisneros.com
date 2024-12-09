@@ -1,5 +1,9 @@
 import { NavbarSelectorProps } from "../ui/navbar/NavbarSelector";
-import { NavigationLinkModel } from "./models";
+import {
+  ArticleCategoriesEnum,
+  CategoryModel,
+  NavigationLinkModel,
+} from "./models";
 
 export const HOME_LINK: NavigationLinkModel = {
   label: "HOME",
@@ -69,4 +73,43 @@ export const FOOTER_LINKS: NavigationLinkModel[] = [
   CATEGORIES_LINK,
   LATESTS_POSTS_LINK,
   ABOUT_LINK,
+];
+
+export const CATEGORIES: CategoryModel[] = [
+  {
+    type: ArticleCategoriesEnum.DEVELOPING,
+    description: "Articles about Developing",
+    path: `developing`,
+    label: "Developing",
+  },
+  {
+    type: ArticleCategoriesEnum.CLOUD,
+    description: "Articles about Cloud",
+    path: `cloud`,
+    label: "Cloud",
+  },
+  {
+    type: ArticleCategoriesEnum.LIFESTYLE,
+    description: "Articles about Lifestyle",
+    path: `lifestyle`,
+    label: "Lifestyle",
+  },
+  {
+    type: ArticleCategoriesEnum.GAMEDEV,
+    description: "Articles about Game Development",
+    path: `gamedev`,
+    label: "Game Development",
+  },
+  {
+    type: ArticleCategoriesEnum.DEVDIARY,
+    description: "Articles about Developer diaries",
+    path: `dev-diary`,
+    label: "Developer Diary",
+  },
+  {
+    type: ArticleCategoriesEnum.GRABBAG,
+    description: "Articles with varied topics",
+    path: `grab-bag`,
+    label: "Grab Bag",
+  },
 ];

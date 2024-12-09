@@ -6,12 +6,12 @@ export interface NavigationLinkModel {
 }
 
 export enum ArticleCategoriesEnum {
-  DEVELOPING,
-  CLOUD,
-  LIFESTYLE,
-  GAMEDEV,
-  DEVDIARY,
-  GRABBAG,
+  DEVELOPING = "DEVELOPING",
+  CLOUD = "CLOUD",
+  LIFESTYLE = "LIFESTYLE",
+  GAMEDEV = "GAMEDEV",
+  DEVDIARY = "DEVDIARY",
+  GRABBAG = "GRABBAG",
 }
 
 export interface ArticleModel {
@@ -27,4 +27,12 @@ export interface ArticleModel {
   tags: string[];
   article_content: string; //MDX for markdown with React components ?
   description: string;
+}
+
+export interface CategoryModel {
+  type: ArticleCategoriesEnum;
+  description: string;
+  path: string;
+  label: string;
+  filter_function?: (type: ArticleCategoriesEnum) => ArticleModel[];
 }
