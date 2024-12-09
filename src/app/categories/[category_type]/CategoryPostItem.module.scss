@@ -1,0 +1,9 @@
+.CategoryPostItem {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: flex-start;
+}

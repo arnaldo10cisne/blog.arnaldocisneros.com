@@ -1,6 +1,7 @@
 import { CATEGORIES } from "@/app/lib/constants";
 import { CategoryModel } from "@/app/lib/models";
-import CategoryTemplate from "@/app/ui/categories-components/CategoryTemplate";
+import CategoryDescription from "@/app/categories/[category_type]/CategoryDescription";
+import CategoryPostList from "@/app/categories/[category_type]/CategoryPostList";
 import React from "react";
 
 interface CategoryTypePageProps {
@@ -15,10 +16,6 @@ export const generateMetadata = async ({ params }: CategoryTypePageProps) => {
   const category: CategoryModel | undefined = CATEGORIES.find(
     (cat) => cat.path === category_type,
   );
-
-  console.log(await params);
-  console.log(category_type);
-  console.log(await category);
 
   if (!category) {
     return {
@@ -40,9 +37,17 @@ const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
     (cat) => cat.path === category_type,
   );
 
+  if (!category) {
+    return <>CATEGORY NOT FOUND // REMEMBER TO IMPLEMENT A 404 ERROR PAGE</>;
+  }
+
   return (
     <>
-      <CategoryTemplate />
+      <CategoryDescription
+        label={category.label}
+        description={category.description}
+      />
+      <CategoryPostList type={category.type} />
     </>
   );
 };
