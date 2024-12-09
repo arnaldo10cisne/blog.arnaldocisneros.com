@@ -5,9 +5,19 @@ export interface NavigationLinkModel {
   isSelectorOption?: boolean;
 }
 
+export enum ArticleCategoriesEnum {
+  DEVELOPING,
+  CLOUD,
+  LIFESTYLE,
+  GAMEDEV,
+  DEVDIARY,
+  GRABBAG,
+}
+
 export interface ArticleModel {
   id: number;
-  url_path: string;
+  article_url_path: string;
+  category: ArticleCategoriesEnum;
   date: Date;
   author: string;
   title: string;
@@ -16,4 +26,5 @@ export interface ArticleModel {
   thumbnail_small: string;
   tags: string[];
   article_content: string; //MDX for markdown with React components ?
+  description: string;
 }
