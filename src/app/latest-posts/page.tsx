@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
+import LatestPostsPageDescription from "./LatestPostsPageDescription";
+import LatestPostsPageList from "./LatestPostsPageList";
 
 export const metadata: Metadata = {
   title: "Latest Posts | Arnaldo Cisneros",
@@ -7,7 +9,12 @@ export const metadata: Metadata = {
 };
 
 const LatestPosts__page = () => {
-  return <div>Latest Posts</div>;
+  return (
+    <>
+      <LatestPostsPageDescription />
+      <LatestPostsPageList />
+    </>
+  );
 };
 
 export default LatestPosts__page;

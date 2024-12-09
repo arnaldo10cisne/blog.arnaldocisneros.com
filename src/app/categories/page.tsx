@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
+import CategoriesPageDescription from "./CategoriesPageDescription";
+import CategoriesPageList from "./CategoriesPageList";
 
 export const metadata: Metadata = {
   title: "Categories | Arnaldo Cisneros",
@@ -7,7 +9,12 @@ export const metadata: Metadata = {
 };
 
 const Categories__page = () => {
-  return <>CATEGORIES</>;
+  return (
+    <>
+      <CategoriesPageDescription />
+      <CategoriesPageList />
+    </>
+  );
 };
 
 export default Categories__page;
