@@ -2,7 +2,11 @@ import React from "react";
 import styles from "./CategoriesPageList.module.scss";
 
 const CategoriesPageList = () => {
-  return <>Listo of categories</>;
+  return (
+    <div className={styles.CategoriesPageList}>
+      <p>List of Categories</p>
+    </div>
+  );
 };
 
 export default CategoriesPageList;
