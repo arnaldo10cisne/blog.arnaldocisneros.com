@@ -75,41 +75,59 @@ export const FOOTER_LINKS: NavigationLinkModel[] = [
   ABOUT_LINK,
 ];
 
+export const CATEGORY_DEVELOPING: CategoryModel = {
+  type: ArticleCategoriesEnum.DEVELOPING,
+  description: "Articles about Developing",
+  path: `developing`,
+  label: "Developing",
+  thumbnail: "/category/thumbnail",
+};
+
+export const CATEGORY_CLOUD: CategoryModel = {
+  type: ArticleCategoriesEnum.CLOUD,
+  description: "Articles about Cloud",
+  path: `cloud`,
+  label: "Cloud",
+  thumbnail: "/category/thumbnail",
+};
+
+export const CATEGORY_LIFESTYLE: CategoryModel = {
+  type: ArticleCategoriesEnum.LIFESTYLE,
+  description: "Articles about Lifestyle",
+  path: `lifestyle`,
+  label: "Lifestyle",
+  thumbnail: "/category/thumbnail",
+};
+
+export const CATEGORY_GAMEDEV: CategoryModel = {
+  type: ArticleCategoriesEnum.GAMEDEV,
+  description: "Articles about Game Development",
+  path: `gamedev`,
+  label: "Game Development",
+  thumbnail: "/category/thumbnail",
+};
+
+export const CATEGORY_DEVDIARY: CategoryModel = {
+  type: ArticleCategoriesEnum.DEVDIARY,
+  description: "Articles about Developer diaries",
+  path: `dev-diary`,
+  label: "Developer Diary",
+  thumbnail: "/category/thumbnail",
+};
+
+export const CATEGORY_GRABBAG: CategoryModel = {
+  type: ArticleCategoriesEnum.GRABBAG,
+  description: "Articles with varied topics",
+  path: `grab-bag`,
+  label: "Grab Bag",
+  thumbnail: "/category/thumbnail",
+};
+
 export const CATEGORIES: CategoryModel[] = [
-  {
-    type: ArticleCategoriesEnum.DEVELOPING,
-    description: "Articles about Developing",
-    path: `developing`,
-    label: "Developing",
-  },
-  {
-    type: ArticleCategoriesEnum.CLOUD,
-    description: "Articles about Cloud",
-    path: `cloud`,
-    label: "Cloud",
-  },
-  {
-    type: ArticleCategoriesEnum.LIFESTYLE,
-    description: "Articles about Lifestyle",
-    path: `lifestyle`,
-    label: "Lifestyle",
-  },
-  {
-    type: ArticleCategoriesEnum.GAMEDEV,
-    description: "Articles about Game Development",
-    path: `gamedev`,
-    label: "Game Development",
-  },
-  {
-    type: ArticleCategoriesEnum.DEVDIARY,
-    description: "Articles about Developer diaries",
-    path: `dev-diary`,
-    label: "Developer Diary",
-  },
-  {
-    type: ArticleCategoriesEnum.GRABBAG,
-    description: "Articles with varied topics",
-    path: `grab-bag`,
-    label: "Grab Bag",
-  },
+  CATEGORY_DEVELOPING,
+  CATEGORY_CLOUD,
+  CATEGORY_LIFESTYLE,
+  CATEGORY_GAMEDEV,
+  CATEGORY_DEVDIARY,
+  CATEGORY_GRABBAG,
 ];

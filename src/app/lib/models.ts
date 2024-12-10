@@ -26,6 +26,7 @@ export interface ArticleModel {
   thumbnail_small: string;
   tags: string[];
   article_content: string; //MDX for markdown with React components ?
+  article_content_location?: string; //Direction in S3
   description: string;
 }
 
@@ -34,5 +35,5 @@ export interface CategoryModel {
   description: string;
   path: string;
   label: string;
-  filter_function?: (type: ArticleCategoriesEnum) => ArticleModel[];
+  thumbnail: string;
 }

@@ -17,7 +17,12 @@ const ArticleTitle = ({
     <section className={styles.ArticleTitleSection}>
       <h1>{title}</h1>
       <p>{subtitle}</p>
-      <Image src={thumbnail_large} alt="ALT" width={100} height={100} />
+      <Image
+        src={thumbnail_large}
+        alt="article-thumbnail"
+        width={100}
+        height={100}
+      />
     </section>
   );
 };

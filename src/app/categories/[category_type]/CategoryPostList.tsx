@@ -1,7 +1,7 @@
 import { MOCK_ARTICLES } from "@/app/lib/mock_data";
 import { ArticleCategoriesEnum } from "@/app/lib/models";
 import React from "react";
-import CategoryPostItem from "./CategoryPostItem";
+import CategoryPostItem from "../../ui/article-card/ArticleCard";
 import styles from "./CategoryPostList.module.scss";
 
 interface CategoryPostListProps {

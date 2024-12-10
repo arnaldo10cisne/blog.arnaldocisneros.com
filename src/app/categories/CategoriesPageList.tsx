@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "./CategoriesPageList.module.scss";
+import { CATEGORIES } from "../lib/constants";
+import CategoriesPageItem from "./CategoriesPageItem";
 
 const CategoriesPageList = () => {
   return (
     <div className={styles.CategoriesPageList}>
-      <p>List of Categories</p>
+      {CATEGORIES.map((category) => (
+        <CategoriesPageItem key={category.label} category={category} />
+      ))}
     </div>
   );
 };
