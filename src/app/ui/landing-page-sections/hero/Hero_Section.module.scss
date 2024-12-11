@@ -12,6 +12,7 @@
   left: 50px;
   bottom: 50%;
   transform: translateY(50%);
+  z-index: 20;
 }
 
 .NextButton {
@@ -19,6 +20,7 @@
   right: 50px;
   bottom: 50%;
   transform: translateY(50%);
+  z-index: 20;
 }
 
 .ElementsNavigation {
@@ -26,4 +28,5 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 20;
 }
