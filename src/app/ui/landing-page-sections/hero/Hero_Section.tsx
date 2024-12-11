@@ -50,7 +50,10 @@ const Hero_Section = () => {
       >
         PREVIOUS
       </button>
-      <HeroElement element={heroElements[currentElement]} />
+      <HeroElement
+        key={currentElement}
+        element={heroElements[currentElement]}
+      />
       <button
         className={styles.NextButton}
         onClick={() => goToElement((currentElement + 1) % heroElements.length)}
