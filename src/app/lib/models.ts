@@ -37,3 +37,10 @@ export interface CategoryModel {
   label: string;
   thumbnail: string;
 }
+
+export interface HeroElementModel {
+  category: string;
+  title: string;
+  description: string;
+  action_link: string;
+}

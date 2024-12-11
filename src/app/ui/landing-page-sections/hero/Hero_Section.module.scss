@@ -2,5 +2,28 @@
   width: 100vw;
   height: 640px;
 
+  position: relative;
+
   background-color: lemonchiffon;
+}
+
+.PreviousButton {
+  position: absolute;
+  left: 50px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.NextButton {
+  position: absolute;
+  right: 50px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.ElementsNavigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
