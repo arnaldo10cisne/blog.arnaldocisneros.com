@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <>
       <Hero_Section />
-      <Profile_Section />
-      <Mission_Section />
       <LatestPosts_Section />
+      <Mission_Section />
       <GetConnected_Section />
+      <Profile_Section />
     </>
   );
 };
