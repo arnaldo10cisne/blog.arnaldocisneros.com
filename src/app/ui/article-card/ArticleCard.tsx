@@ -3,13 +3,20 @@ import styles from "./ArticleCard.module.scss";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import classNames from "classnames";
+import { FONT_NEWSREADER } from "@/app/lib/fonts";
 
 interface ArticleCard {
   article: ArticleModel;
   largeStyle?: boolean;
+  showCategory?: boolean;
 }
 
-const ArticleCard = ({ article, largeStyle = false }: ArticleCard) => {
+const ArticleCard = ({
+  article,
+  largeStyle = false,
+  showCategory = true,
+}: ArticleCard) => {
   return (
     <Link
       className={
@@ -18,16 +25,31 @@ const ArticleCard = ({ article, largeStyle = false }: ArticleCard) => {
       key={article.id}
       href={`/${article.article_url_path}`}
     >
-      <Image
-        src={largeStyle ? article.thumbnail_large : article.thumbnail_small}
-        alt={article.title}
-        width={100}
-        height={100}
-      />
-      <div>
-        {largeStyle ? <p>{article.category}</p> : null}
-        <h1>{article.title}</h1>
-        <p>{article.description}</p>
+      <div className={styles.ArticleCardImageContainer}>
+        <Image
+          className={styles.ArticleCardImage}
+          src={article.thumbnail_small}
+          alt={article.title}
+          fill
+          // width={largeStyle ? 1500 : 768}
+          // height={largeStyle ? 1000 : 512}
+        />
+      </div>
+      <div className={styles.ArticleCardDataContainer}>
+        {showCategory ? (
+          <p className={styles.ArticleCardCategoryLabel}>{article.category}</p>
+        ) : null}
+        <h1
+          className={classNames(
+            styles.ArticleCardTitle,
+            FONT_NEWSREADER.className,
+          )}
+        >
+          {article.title}
+        </h1>
+        {largeStyle ? (
+          <p className={styles.ArticleCardDescription}>{article.description}</p>
+        ) : null}
       </div>
     </Link>
   );

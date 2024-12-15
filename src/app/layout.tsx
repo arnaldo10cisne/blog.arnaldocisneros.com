@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./lib/_globals.scss";
 import Footer from "./ui/footer/Footer";
 import Navbar from "./ui/navbar/Navbar";
+import { FONT_MONTSERRAT } from "./lib/fonts";
 
 const geistSans = localFont({
   src: "./lib/fonts/GeistVF.woff",
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${FONT_MONTSERRAT.className}`}>
         <Navbar />
         {children}
         <Footer />

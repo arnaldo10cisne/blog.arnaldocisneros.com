@@ -1,8 +1,9 @@
 import { CATEGORIES } from "@/app/lib/constants";
 import { CategoryModel } from "@/app/lib/models";
 import CategoryDescription from "@/app/categories/[category_type]/CategoryDescription";
-import CategoryPostList from "@/app/categories/[category_type]/CategoryPostList";
 import React from "react";
+import LargeArticleList from "@/app/ui/large-article-list/LargeArticleList";
+import { MOCK_ARTICLES } from "@/app/lib/mock_data";
 
 interface CategoryTypePageProps {
   params: {
@@ -47,7 +48,12 @@ const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
         label={category.label}
         description={category.description}
       />
-      <CategoryPostList type={category.type} />
+
+      <LargeArticleList
+        article_list={MOCK_ARTICLES.filter((art) => {
+          return art.category === category.type;
+        })}
+      />
     </>
   );
 };
