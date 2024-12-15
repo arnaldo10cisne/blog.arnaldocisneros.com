@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Categories of articles",
 };
 
-const Categories__page = () => {
+const CategoriesPage = () => {
   return (
     <>
       <CategoriesPageDescription />
@@ -16,4 +16,4 @@ const Categories__page = () => {
     </>
   );
 };
-export default Categories__page;
+export default CategoriesPage;

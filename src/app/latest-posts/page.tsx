@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Latest Posts inblog",
 };
 
-const LatestPosts__page = () => {
+const LatestPostsPage = () => {
   const latestsArticles: ArticleModel[] = MOCK_ARTICLES;
   return (
     <div className={styles.LatestPostsPage}>
@@ -20,4 +20,4 @@ const LatestPosts__page = () => {
     </div>
   );
 };
-export default LatestPosts__page;
+export default LatestPostsPage;
