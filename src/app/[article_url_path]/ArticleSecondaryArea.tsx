@@ -1,6 +1,8 @@
 import React from "react";
-// import styles from './ArticlePage.module.scss'
+import styles from "./ArticleSecondaryArea.module.scss";
 
 export const ArticleSecondaryArea = () => {
-  return <section>Secondary AREA</section>;
+  return (
+    <section className={styles.ArticleSecondaryArea}>Secondary AREA</section>
+  );
 };

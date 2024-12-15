@@ -53,7 +53,7 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
   }
 
   return (
-    <article className={styles.Article}>
+    <article className={styles.ArticlePage}>
       <ArticleTitle
         title={article.title}
         subtitle={article.subtitle}
