@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./LatestPosts_Section.module.scss";
 import { MOCK_ARTICLES } from "@/app/lib/mock_data";
-import ArticleCard from "../../article-card/ArticleCard";
+import { ArticleCard } from "../../article-card/ArticleCard";
 
-const LatestPosts_Section = () => {
+export const LatestPosts_Section = () => {
   const latest_articles = MOCK_ARTICLES.slice(0, 4);
 
   return (
@@ -17,5 +17,3 @@ const LatestPosts_Section = () => {
     </section>
   );
 };
-
-export default LatestPosts_Section;

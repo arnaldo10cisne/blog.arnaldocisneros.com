@@ -7,7 +7,7 @@ interface HeroElementProps {
   element: HeroElementModel;
 }
 
-const HeroElement = ({ element }: HeroElementProps) => {
+export const HeroElement = ({ element }: HeroElementProps) => {
   return (
     <div className={styles.HeroElement}>
       <p>{element.category}</p>
@@ -19,5 +19,3 @@ const HeroElement = ({ element }: HeroElementProps) => {
     </div>
   );
 };
-
-export default HeroElement;

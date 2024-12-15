@@ -8,7 +8,7 @@ interface CategoriesPageItemProps {
   category: CategoryModel;
 }
 
-const CategoriesPageItem = ({ category }: CategoriesPageItemProps) => {
+export const CategoriesPageItem = ({ category }: CategoriesPageItemProps) => {
   return (
     <Link
       className={styles.CategoriesPageItem}
@@ -25,5 +25,3 @@ const CategoriesPageItem = ({ category }: CategoriesPageItemProps) => {
     </Link>
   );
 };
-
-export default CategoriesPageItem;

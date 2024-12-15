@@ -6,7 +6,7 @@ interface CategoryDescriptionProps {
   description: string;
 }
 
-const CategoryDescription = ({
+export const CategoryDescription = ({
   label,
   description,
 }: CategoryDescriptionProps) => {
@@ -17,5 +17,3 @@ const CategoryDescription = ({
     </section>
   );
 };
-
-export default CategoryDescription;

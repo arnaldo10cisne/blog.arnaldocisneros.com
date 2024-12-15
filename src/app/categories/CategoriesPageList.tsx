@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./CategoriesPageList.module.scss";
 import { CATEGORIES } from "../lib/constants";
-import CategoriesPageItem from "./CategoriesPageItem";
+import { CategoriesPageItem } from "./CategoriesPageItem";
 
-const CategoriesPageList = () => {
+export const CategoriesPageList = () => {
   return (
     <div className={styles.CategoriesPageList}>
       {CATEGORIES.map((category) => (
@@ -12,5 +12,3 @@ const CategoriesPageList = () => {
     </div>
   );
 };
-
-export default CategoriesPageList;

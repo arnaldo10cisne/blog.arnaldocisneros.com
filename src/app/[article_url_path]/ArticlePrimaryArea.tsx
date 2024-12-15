@@ -6,8 +6,6 @@ interface ArticlePrimaryAreaProps {
   article: ArticleModel;
 }
 
-const ArticlePrimaryArea = ({ article }: ArticlePrimaryAreaProps) => {
+export const ArticlePrimaryArea = ({ article }: ArticlePrimaryAreaProps) => {
   return <section>{article.article_content}</section>;
 };
-
-export default ArticlePrimaryArea;

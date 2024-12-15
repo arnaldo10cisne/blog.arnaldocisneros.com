@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Hero_Section.module.scss";
 import { MOCK_HERO_ELEMENTS } from "@/app/lib/mock_data";
-import HeroElement from "./HeroElement";
+import { HeroElement } from "./HeroElement";
 
-const Hero_Section = () => {
+export const Hero_Section = () => {
   const [currentElement, setCurrentElement] = useState<number>(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -76,5 +76,3 @@ const Hero_Section = () => {
     </section>
   );
 };
-
-export default Hero_Section;

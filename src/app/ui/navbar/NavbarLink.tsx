@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import styles from "./NavbarLink.module.scss";
 import { NavigationLinkModel } from "@/app/lib/models";
 
-const NavbarLink = ({
+export const NavbarLink = ({
   label,
   href,
   newTab = false,
@@ -26,5 +26,3 @@ const NavbarLink = ({
     </Link>
   );
 };
-
-export default NavbarLink;

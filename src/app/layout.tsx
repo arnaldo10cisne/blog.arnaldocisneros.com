@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./lib/_globals.scss";
-import Footer from "./ui/footer/Footer";
-import Navbar from "./ui/navbar/Navbar";
+import { Footer } from "./ui/footer/Footer";
+import { Navbar } from "./ui/navbar/Navbar";
 import { FONT_MONTSERRAT } from "./lib/fonts";
-
-const geistSans = localFont({
-  src: "./lib/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./lib/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Arnaldo Cisneros | Blog",

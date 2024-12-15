@@ -6,17 +6,17 @@ import Image from "next/image";
 import classNames from "classnames";
 import { FONT_NEWSREADER } from "@/app/lib/fonts";
 
-interface ArticleCard {
+interface ArticleCardProps {
   article: ArticleModel;
   largeStyle?: boolean;
   showCategory?: boolean;
 }
 
-const ArticleCard = ({
+export const ArticleCard = ({
   article,
   largeStyle = false,
   showCategory = true,
-}: ArticleCard) => {
+}: ArticleCardProps) => {
   return (
     <Link
       className={
@@ -54,5 +54,3 @@ const ArticleCard = ({
     </Link>
   );
 };
-
-export default ArticleCard;

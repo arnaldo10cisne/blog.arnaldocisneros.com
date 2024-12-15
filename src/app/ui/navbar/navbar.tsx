@@ -1,6 +1,6 @@
 import React from "react";
-import NavbarLink from "./NavbarLink";
-import NavbarSelector from "./NavbarSelector";
+import { NavbarLink } from "./NavbarLink";
+import { NavbarSelector } from "./NavbarSelector";
 import styles from "./Navbar.module.scss";
 import {
   ABOUT_LINK,
@@ -9,7 +9,7 @@ import {
   LATESTS_POSTS_LINK,
 } from "@/app/lib/constants";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav className={styles.Navbar}>
       <div>LOGO</div>
@@ -24,5 +24,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

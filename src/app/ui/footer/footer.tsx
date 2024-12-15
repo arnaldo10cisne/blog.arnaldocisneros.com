@@ -3,7 +3,7 @@ import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { FOOTER_LINKS } from "@/app/lib/constants";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={`${styles.Footer}`}>
       <div className={`${styles.FooterLinkList}`}>
@@ -24,5 +24,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

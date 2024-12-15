@@ -8,7 +8,7 @@ interface ArticleTitleProps {
   thumbnail_large: string;
 }
 
-const ArticleTitle = ({
+export const ArticleTitle = ({
   title,
   subtitle,
   thumbnail_large,
@@ -26,5 +26,3 @@ const ArticleTitle = ({
     </section>
   );
 };
-
-export default ArticleTitle;

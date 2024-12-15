@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./LargeArticleList.module.scss";
 import { ArticleModel } from "@/app/lib/models";
-import ArticleCard from "../article-card/ArticleCard";
+import { ArticleCard } from "../article-card/ArticleCard";
 
 interface LargeArticleListProps {
   article_list: ArticleModel[];
   showCategory?: boolean;
 }
 
-const LargeArticleList = ({
+export const LargeArticleList = ({
   article_list,
   showCategory = true,
 }: LargeArticleListProps) => {
@@ -19,11 +19,9 @@ const LargeArticleList = ({
           key={art.id}
           article={art}
           largeStyle={true}
-          showCategory
+          showCategory={showCategory}
         />
       ))}
     </div>
   );
 };
-
-export default LargeArticleList;

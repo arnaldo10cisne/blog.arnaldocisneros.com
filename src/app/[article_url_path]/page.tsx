@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./ArticlePage.module.scss";
-import ArticleTitle from "./ArticleTitle";
-import ArticlePrimaryArea from "./ArticlePrimaryArea";
-import ArticleSecondaryArea from "./ArticleSecondaryArea";
+import { ArticleTitle } from "./ArticleTitle";
+import { ArticlePrimaryArea } from "./ArticlePrimaryArea";
+import { ArticleSecondaryArea } from "./ArticleSecondaryArea";
 import { ArticleModel } from "../lib/models";
 import { MOCK_ARTICLES } from "../lib/mock_data";
 

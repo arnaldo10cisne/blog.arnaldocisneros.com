@@ -2,7 +2,7 @@
 
 import { NavigationLinkModel } from "@/app/lib/models";
 import React, { useState } from "react";
-import NavbarLink from "./NavbarLink";
+import { NavbarLink } from "./NavbarLink";
 import styles from "./NavbarSelector.module.scss";
 
 export interface NavbarSelectorProps {
@@ -10,7 +10,7 @@ export interface NavbarSelectorProps {
   optionsList: NavigationLinkModel[];
 }
 
-const NavbarSelector = ({ link, optionsList }: NavbarSelectorProps) => {
+export const NavbarSelector = ({ link, optionsList }: NavbarSelectorProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleDropdownMenu = (option: boolean) => {
     setIsOpen(option);
@@ -37,5 +37,3 @@ const NavbarSelector = ({ link, optionsList }: NavbarSelectorProps) => {
     </div>
   );
 };
-
-export default NavbarSelector;

@@ -1,8 +1,8 @@
 import { CATEGORIES } from "@/app/lib/constants";
 import { CategoryModel } from "@/app/lib/models";
-import CategoryDescription from "@/app/categories/[category_type]/CategoryDescription";
+import { CategoryDescription } from "@/app/categories/[category_type]/CategoryDescription";
 import React from "react";
-import LargeArticleList from "@/app/ui/large-article-list/LargeArticleList";
+import { LargeArticleList } from "@/app/ui/large-article-list/LargeArticleList";
 import { MOCK_ARTICLES } from "@/app/lib/mock_data";
 import styles from "./CategoryTypePage.module.scss";
 
@@ -58,5 +58,4 @@ const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
     </div>
   );
 };
-
 export default CategoryTypePage;
