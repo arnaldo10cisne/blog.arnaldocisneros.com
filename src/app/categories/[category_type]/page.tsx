@@ -4,6 +4,7 @@ import CategoryDescription from "@/app/categories/[category_type]/CategoryDescri
 import React from "react";
 import LargeArticleList from "@/app/ui/large-article-list/LargeArticleList";
 import { MOCK_ARTICLES } from "@/app/lib/mock_data";
+import styles from "./CategoryTypePage.module.scss";
 
 interface CategoryTypePageProps {
   params: {
@@ -42,19 +43,19 @@ const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
     return <>CATEGORY NOT FOUND // REMEMBER TO IMPLEMENT A 404 ERROR PAGE</>;
   }
 
+  const articles_list = MOCK_ARTICLES.filter((art) => {
+    return art.category === category.type;
+  });
+
   return (
-    <>
+    <div className={styles.CategoryTypePage}>
       <CategoryDescription
         label={category.label}
         description={category.description}
       />
 
-      <LargeArticleList
-        article_list={MOCK_ARTICLES.filter((art) => {
-          return art.category === category.type;
-        })}
-      />
-    </>
+      <LargeArticleList article_list={articles_list} />
+    </div>
   );
 };
 
