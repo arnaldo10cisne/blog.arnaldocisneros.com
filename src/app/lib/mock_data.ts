@@ -18,7 +18,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["JavaScript", "TypeScript", "Fullstack"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/javascript_vs_typescript_en_desarrollo_fullstack.mdx",
     description:
       "Descubre cuál de estas herramientas es la mejor opción para tus proyectos fullstack.",
   },
@@ -34,7 +34,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Next.js", "Performance", "Optimización"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/mejorando_rendimiento_con_nextjs.mdx",
     description:
       "Aprende técnicas avanzadas para mejorar la velocidad de tus aplicaciones con Next.js.",
   },
@@ -52,7 +52,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["AWS", "Serverless", "Cloud"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/introduccion_arquitectura_serverless_aws.mdx",
     description:
       "Conoce los fundamentos y beneficios de las arquitecturas serverless en AWS.",
   },
@@ -68,7 +68,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["AWS", "Bases de datos", "DynamoDB", "RDS"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/gestionando_datos_amazon_rds_dynamodb.mdx",
     description:
       "Explora las diferencias clave entre RDS y DynamoDB y cómo usarlas eficazmente.",
   },
@@ -86,7 +86,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Productividad", "Lifestyle", "Desarrollo"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/rutinas_productividad_desarrollador.mdx",
     description:
       "Aprende estrategias prácticas para mantener tu productividad como desarrollador.",
   },
@@ -102,7 +102,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Burnout", "Balance", "Lifestyle"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/balance_trabajo_vida_como_desarrollador.mdx",
     description:
       "Descubre cómo encontrar el equilibrio perfecto entre tu trabajo y tu vida personal.",
   },
@@ -120,7 +120,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Unity", "GameDev", "Tutorial"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/primeros_pasos_unity_desarrollador.mdx",
     description:
       "Inicia tu camino en el desarrollo de videojuegos con Unity y crea tu primer proyecto.",
   },
@@ -136,7 +136,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Unity", "GameDev", "Optimización"],
     article_content_location:
-      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/optimizacion_juegos_moviles_con_unity.mdx",
     description:
       "Mejora el rendimiento de tus juegos móviles en Unity con técnicas avanzadas.",
   },
