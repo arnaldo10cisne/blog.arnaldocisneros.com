@@ -16,7 +16,7 @@ export enum ArticleCategoriesEnum {
 
 export interface ArticleModel {
   id: number;
-  article_url_path: string;
+  article_url: string;
   category: ArticleCategoriesEnum;
   date: Date;
   author: string;

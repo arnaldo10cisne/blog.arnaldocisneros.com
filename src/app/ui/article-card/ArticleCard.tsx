@@ -23,7 +23,7 @@ export const ArticleCard = ({
         largeStyle ? styles.ArticleCard_large : styles.ArticleCard_small
       }
       key={article.id}
-      href={`/${article.article_url_path}`}
+      href={`/${article.article_url}`}
     >
       <div className={styles.ArticleCardImageContainer}>
         <Image

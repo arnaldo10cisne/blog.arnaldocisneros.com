@@ -10,14 +10,14 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 interface ArticlePageProps {
   params: {
-    article_url_path: string;
+    article_url: string;
   };
 }
 
 export const generateMetadata = ({ params }: ArticlePageProps) => {
-  const { article_url_path } = params;
+  const { article_url } = params;
   const article: ArticleModel | undefined = MOCK_ARTICLES.find(
-    (art) => art.article_url_path === article_url_path,
+    (art) => art.article_url === article_url,
   );
 
   if (!article) {
@@ -42,10 +42,10 @@ const fetchMDXSource = async (
 };
 
 const ArticlePage = async ({ params }: ArticlePageProps) => {
-  const { article_url_path } = params;
+  const { article_url } = params;
 
   const article: ArticleModel | undefined = MOCK_ARTICLES.find(
-    (art) => art.article_url_path === article_url_path,
+    (art) => art.article_url === article_url,
   );
 
   if (!article) {

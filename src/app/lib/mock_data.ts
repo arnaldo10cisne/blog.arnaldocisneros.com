@@ -8,7 +8,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // DEVELOPING
   {
     id: 1,
-    article_url_path: "fullstack-javascript-vs-typescript",
+    article_url: "fullstack-javascript-vs-typescript",
     category: ArticleCategoriesEnum.DEVELOPING,
     date: new Date("2022-02-15"),
     author: "Arnaldo Cisneros",
@@ -24,7 +24,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 2,
-    article_url_path: "mejorando-perfomance-con-nextjs",
+    article_url: "mejorando-perfomance-con-nextjs",
     category: ArticleCategoriesEnum.DEVELOPING,
     date: new Date("2022-06-30"),
     author: "Arnaldo Cisneros",
@@ -42,7 +42,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // CLOUD
   {
     id: 3,
-    article_url_path: "arquitecturas-serverless",
+    article_url: "arquitecturas-serverless",
     category: ArticleCategoriesEnum.CLOUD,
     date: new Date("2022-11-12"),
     author: "Arnaldo Cisneros",
@@ -58,7 +58,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 4,
-    article_url_path: "gestion-datos-rds-dynamodb",
+    article_url: "gestion-datos-rds-dynamodb",
     category: ArticleCategoriesEnum.CLOUD,
     date: new Date("2023-03-08"),
     author: "Arnaldo Cisneros",
@@ -76,7 +76,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // LIFESTYLE
   {
     id: 5,
-    article_url_path: "rutinas-productividad-desarrollador",
+    article_url: "rutinas-productividad-desarrollador",
     category: ArticleCategoriesEnum.LIFESTYLE,
     date: new Date("2023-07-25"),
     author: "Arnaldo Cisneros",
@@ -92,7 +92,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 6,
-    article_url_path: "balance-trabajo-vida",
+    article_url: "balance-trabajo-vida",
     category: ArticleCategoriesEnum.LIFESTYLE,
     date: new Date("2023-10-19"),
     author: "Arnaldo Cisneros",
@@ -110,7 +110,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // GAMEDEV
   {
     id: 7,
-    article_url_path: "primeros-pasos-unity",
+    article_url: "primeros-pasos-unity",
     category: ArticleCategoriesEnum.GAMEDEV,
     date: new Date("2024-01-11"),
     author: "Arnaldo Cisneros",
@@ -126,7 +126,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 8,
-    article_url_path: "optimizacion-juegos-moviles",
+    article_url: "optimizacion-juegos-moviles",
     category: ArticleCategoriesEnum.GAMEDEV,
     date: new Date("2024-05-22"),
     author: "Arnaldo Cisneros",
@@ -144,7 +144,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // DEVDIARY
   {
     id: 9,
-    article_url_path: "actualizacion-proyecto-blog",
+    article_url: "actualizacion-proyecto-blog",
     category: ArticleCategoriesEnum.DEVDIARY,
     date: new Date("2024-08-15"),
     author: "Arnaldo Cisneros",
@@ -160,7 +160,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 10,
-    article_url_path: "experimento-lambda-playwright",
+    article_url: "experimento-lambda-playwright",
     category: ArticleCategoriesEnum.DEVDIARY,
     date: new Date("2024-11-03"),
     author: "Arnaldo Cisneros",
@@ -178,7 +178,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   // GRABBAG
   {
     id: 11,
-    article_url_path: "viaje-ingeniero-nube",
+    article_url: "viaje-ingeniero-nube",
     category: ArticleCategoriesEnum.GRABBAG,
     date: new Date("2025-01-05"),
     author: "Arnaldo Cisneros",
@@ -194,7 +194,7 @@ export const MOCK_ARTICLES: ArticleModel[] = [
   },
   {
     id: 12,
-    article_url_path: "top-5-juegos-indie",
+    article_url: "top-5-juegos-indie",
     category: ArticleCategoriesEnum.GRABBAG,
     date: new Date("2025-01-20"),
     author: "Arnaldo Cisneros",
