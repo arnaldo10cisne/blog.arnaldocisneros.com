@@ -5,22 +5,14 @@ import { ArticlePrimaryArea } from "./ArticlePrimaryArea";
 import { ArticleSecondaryArea } from "./ArticleSecondaryArea";
 import { ArticleModel } from "../lib/models";
 import { MOCK_ARTICLES } from "../lib/mock_data";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 interface ArticlePageProps {
   params: {
     article_url_path: string;
   };
 }
-
-//TODO: Implementar funcion getStaticParams:
-// export async function generateStaticParams() {
-//   // Obtén todos los artículos de tu fuente de datos
-//   // Por ejemplo:
-//   const allArticles = await getAllArticles(); // Deberás implementar getAllArticles
-//   return allArticles.map(article => ({
-//     url_path: article.url_path
-//   }));
-// }
 
 export const generateMetadata = ({ params }: ArticlePageProps) => {
   const { article_url_path } = params;
@@ -41,7 +33,15 @@ export const generateMetadata = ({ params }: ArticlePageProps) => {
   };
 };
 
-const ArticlePage = ({ params }: ArticlePageProps) => {
+const fetchMDXSource = async (
+  url_path: string,
+): Promise<MDXRemoteSerializeResult> => {
+  const res = await fetch(url_path);
+  const mdxText = await res.text();
+  return await serialize(mdxText);
+};
+
+const ArticlePage = async ({ params }: ArticlePageProps) => {
   const { article_url_path } = params;
 
   const article: ArticleModel | undefined = MOCK_ARTICLES.find(
@@ -52,6 +52,11 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
     return <div>ARTICLE NOT FOUND</div>;
   }
 
+  // This URL_PATH must come from a dynamoDB database under the name of article_content_location
+  const mdxSource = await fetchMDXSource(
+    "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
+  );
+
   return (
     <article className={styles.ArticlePage}>
       <ArticleTitle
@@ -60,7 +65,7 @@ const ArticlePage = ({ params }: ArticlePageProps) => {
         thumbnail_large={article.thumbnail_large}
       />
       <main className={styles.ArticleMainArea}>
-        <ArticlePrimaryArea article={article} />
+        <ArticlePrimaryArea article={article} mdxSource={mdxSource} />
         <ArticleSecondaryArea />
       </main>
     </article>

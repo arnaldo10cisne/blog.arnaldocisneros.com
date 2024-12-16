@@ -3,9 +3,10 @@ import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["placehold.co"],
+    domains: ["placehold.co", "lpfw.org", "upload.wikimedia.org"],
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  transpilePackages: ["next-mdx-remote"],
 };
 
 const withMDX = createMDX({
