@@ -17,9 +17,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["JavaScript", "TypeScript", "Fullstack"],
-    article_content: `
-      <p>Como desarrollador fullstack, he usado tanto JavaScript como TypeScript en diversos proyectos. Mientras JavaScript brilla por su simplicidad inicial, TypeScript destaca en la escalabilidad y la reducción de errores a largo plazo. Este artículo analiza las ventajas y desventajas de ambas herramientas.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Descubre cuál de estas herramientas es la mejor opción para tus proyectos fullstack.",
   },
@@ -34,9 +33,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Next.js", "Performance", "Optimización"],
-    article_content: `
-      <p>Next.js ofrece múltiples herramientas para optimizar el rendimiento, desde la carga dinámica hasta la optimización de imágenes. Este artículo muestra ejemplos prácticos de cómo mejorar la velocidad y la experiencia del usuario en tus aplicaciones web.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Aprende técnicas avanzadas para mejorar la velocidad de tus aplicaciones con Next.js.",
   },
@@ -53,9 +51,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["AWS", "Serverless", "Cloud"],
-    article_content: `
-      <p>Las arquitecturas serverless con AWS han transformado el desarrollo web. En este artículo, exploramos cómo herramientas como Lambda y API Gateway pueden ayudarte a construir aplicaciones escalables sin la necesidad de gestionar servidores.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Conoce los fundamentos y beneficios de las arquitecturas serverless en AWS.",
   },
@@ -70,9 +67,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["AWS", "Bases de datos", "DynamoDB", "RDS"],
-    article_content: `
-      <p>¿RDS o DynamoDB? Ambas opciones tienen ventajas claras dependiendo del caso de uso. Este artículo explora cuándo elegir una base de datos relacional o una base de datos NoSQL y cómo integrarlas en aplicaciones modernas.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Explora las diferencias clave entre RDS y DynamoDB y cómo usarlas eficazmente.",
   },
@@ -89,9 +85,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Productividad", "Lifestyle", "Desarrollo"],
-    article_content: `
-      <p>La productividad no solo depende de trabajar duro, sino de trabajar inteligentemente. En este artículo comparto las rutinas y herramientas que utilizo para mantenerme enfocado y eficiente durante jornadas largas como desarrollador.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Aprende estrategias prácticas para mantener tu productividad como desarrollador.",
   },
@@ -106,9 +101,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Burnout", "Balance", "Lifestyle"],
-    article_content: `
-      <p>Ser desarrollador es apasionante, pero también puede ser agotador si no hay un balance adecuado. Aquí comparto consejos y experiencias para evitar el burnout y disfrutar más del camino.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Descubre cómo encontrar el equilibrio perfecto entre tu trabajo y tu vida personal.",
   },
@@ -125,9 +119,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Unity", "GameDev", "Tutorial"],
-    article_content: `
-      <p>Unity es una plataforma poderosa para crear videojuegos. En este tutorial aprenderás cómo instalar Unity, configurar un proyecto y crear tu primer juego en 2D con movimiento básico.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Inicia tu camino en el desarrollo de videojuegos con Unity y crea tu primer proyecto.",
   },
@@ -142,9 +135,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Unity", "GameDev", "Optimización"],
-    article_content: `
-      <p>En dispositivos móviles, el rendimiento es clave. Aprende las mejores prácticas para optimizar tu juego en Unity, incluyendo el manejo de gráficos, memoria y física para maximizar la experiencia del jugador.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Mejora el rendimiento de tus juegos móviles en Unity con técnicas avanzadas.",
   },
@@ -161,9 +153,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["DevDiary", "Blog", "Progreso"],
-    article_content: `
-      <p>Estoy trabajando en un blog personal con Next.js y AWS. Esta semana implementé rutas dinámicas para artículos y comencé a optimizar el rendimiento con SSG. ¡Pronto estará disponible para el público!</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Una actualización sobre el progreso del blog personal utilizando Next.js y AWS.",
   },
@@ -178,9 +169,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Lambda", "Playwright", "Automatización"],
-    article_content: `
-      <p>Esta semana he estado experimentando con Playwright para automatizar tareas en funciones AWS Lambda. Aunque enfrenté problemas de compatibilidad inicial, las soluciones con Docker han sido prometedoras.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Explora cómo Playwright y Lambda pueden usarse juntos para automatizar procesos.",
   },
@@ -197,9 +187,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Viajes", "Ingeniería", "Reflexiones"],
-    article_content: `
-      <p>En mi último viaje, reflexioné sobre cómo la nube nos ha permitido trabajar desde cualquier lugar del mundo. La tecnología ha cambiado nuestras vidas, y cada día se abren nuevas posibilidades.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Una reflexión personal sobre la libertad que la tecnología en la nube brinda para trabajar desde cualquier lugar.",
   },
@@ -214,9 +203,8 @@ export const MOCK_ARTICLES: ArticleModel[] = [
     thumbnail_large: "https://placehold.co/2048x1365/png",
     thumbnail_small: "https://placehold.co/768x512/png",
     tags: ["Juegos indie", "Recomendaciones", "Creatividad"],
-    article_content: `
-      <p>Los juegos indie han redefinido cómo vemos la creatividad en el desarrollo de videojuegos. Desde la narrativa emocional de <i>Celeste</i> hasta la exploración visual de <i>Journey</i>, estos títulos muestran cómo equipos pequeños pueden impactar enormemente la industria. Aquí te presento cinco juegos que considero esenciales para cualquier desarrollador que busca inspiración.</p>
-    `,
+    article_content_location:
+      "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
     description:
       "Descubre cinco juegos indie que destacan por su creatividad y diseño excepcional, ideales para inspirar a desarrolladores.",
   },

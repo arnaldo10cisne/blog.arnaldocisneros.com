@@ -25,8 +25,7 @@ export interface ArticleModel {
   thumbnail_large: string;
   thumbnail_small: string;
   tags: string[];
-  article_content: string; //MDX for markdown with React components ?
-  article_content_location?: string; //Direction in S3
+  article_content_location: string; //Direction in S3
   description: string;
 }
 

@@ -53,9 +53,7 @@ const ArticlePage = async ({ params }: ArticlePageProps) => {
   }
 
   // This URL_PATH must come from a dynamoDB database under the name of article_content_location
-  const mdxSource = await fetchMDXSource(
-    "https://s3.us-east-1.amazonaws.com/blog.arnaldocisneros.com/articles/placeholder_article_remote.mdx",
-  );
+  const mdxSource = await fetchMDXSource(article.article_content_location);
 
   return (
     <article className={styles.ArticlePage}>
@@ -65,7 +63,7 @@ const ArticlePage = async ({ params }: ArticlePageProps) => {
         thumbnail_large={article.thumbnail_large}
       />
       <main className={styles.ArticleMainArea}>
-        <ArticlePrimaryArea article={article} mdxSource={mdxSource} />
+        <ArticlePrimaryArea mdxSource={mdxSource} />
         <ArticleSecondaryArea />
       </main>
     </article>
