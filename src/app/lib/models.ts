@@ -41,5 +41,5 @@ export interface HeroElementModel {
   category: string;
   title: string;
   description: string;
-  action_link: string;
+  article_url: string;
 }

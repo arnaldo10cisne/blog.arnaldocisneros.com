@@ -1,10 +1,14 @@
 import { TESTING_URL } from "./constants";
 import { ArticleCategoriesEnum } from "./models";
 
-interface getLastestArticlesFromDynamoDBProps {
+interface getLastestArticlesFromDynamoDBParams {
   category?: ArticleCategoriesEnum | null;
   limit: number;
   start_key?: string | null;
+}
+
+interface getHeroArticleItemsFromDynamoDBParams {
+  limit: number;
 }
 
 // Reusable fetch handler
@@ -22,11 +26,18 @@ export const getArticleItemFromDynamoDB = async (article_url: string) => {
   return await fetchData(`${TESTING_URL}?article_url=${article_url}`);
 };
 
+export const getHeroArticleItemsFromDynamoDB = async ({
+  limit,
+}: getHeroArticleItemsFromDynamoDBParams) => {
+  const limitStringParam = `limit=${String(limit)}`;
+  return await fetchData(`${TESTING_URL}?${limitStringParam}&highlight=true`);
+};
+
 export const getLastestArticlesFromDynamoDB = async ({
   category = null,
   limit,
   start_key = null,
-}: getLastestArticlesFromDynamoDBProps) => {
+}: getLastestArticlesFromDynamoDBParams) => {
   const categoryStringParam = category ? `category=${category}` : "";
   const limitStringParam = `limit=${String(limit)}`;
   const startKeyStringParam = start_key ? `start_key=${start_key}` : "";

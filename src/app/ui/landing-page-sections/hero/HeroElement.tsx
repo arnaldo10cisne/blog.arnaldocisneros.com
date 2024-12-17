@@ -13,7 +13,7 @@ export const HeroElement = ({ element }: HeroElementProps) => {
       <p>{element.category}</p>
       <h1>{element.title}</h1>
       <p>{element.description}</p>
-      <Link href={element.action_link} className={styles.ActionLinkButton}>
+      <Link href={element.article_url} className={styles.ActionLinkButton}>
         <div>I want to know more!</div>
       </Link>
     </div>
