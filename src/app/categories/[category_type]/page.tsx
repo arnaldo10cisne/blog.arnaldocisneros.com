@@ -1,10 +1,10 @@
 import { CATEGORIES } from "@/app/lib/constants";
-import { CategoryModel } from "@/app/lib/models";
+import { ArticleModel, CategoryModel } from "@/app/lib/models";
 import { CategoryDescription } from "@/app/categories/[category_type]/CategoryDescription";
 import React from "react";
 import { LargeArticleList } from "@/app/ui/large-article-list/LargeArticleList";
-import { MOCK_ARTICLES } from "@/app/lib/mock_data";
 import styles from "./CategoryTypePage.module.scss";
+import { getLastestArticlesFromDynamoDB } from "@/app/lib/api_utils";
 
 interface CategoryTypePageProps {
   params: {
@@ -32,7 +32,7 @@ export const generateMetadata = async ({ params }: CategoryTypePageProps) => {
   };
 };
 
-const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
+const CategoryTypePage = async ({ params }: CategoryTypePageProps) => {
   const { category_type } = params;
 
   const category: CategoryModel | undefined = CATEGORIES.find(
@@ -43,9 +43,12 @@ const CategoryTypePage = ({ params }: CategoryTypePageProps) => {
     return <>CATEGORY NOT FOUND // REMEMBER TO IMPLEMENT A 404 ERROR PAGE</>;
   }
 
-  const articles_list = MOCK_ARTICLES.filter((art) => {
-    return art.category === category.type;
+  const response = await getLastestArticlesFromDynamoDB({
+    category: category.type,
+    limit: 8,
+    start_key: null,
   });
+  const articles_list: ArticleModel[] = response.Items;
 
   return (
     <div className={styles.CategoryTypePage}>

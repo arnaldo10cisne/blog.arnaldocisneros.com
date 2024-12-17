@@ -3,16 +3,20 @@ import React from "react";
 import { LatestPostsPageDescription } from "./LatestPostsPageDescription";
 import { LargeArticleList } from "../ui/large-article-list/LargeArticleList";
 import { ArticleModel } from "../lib/models";
-import { MOCK_ARTICLES } from "../lib/mock_data";
 import styles from "./LatestPostsPage.module.scss";
+import { getLastestArticlesFromDynamoDB } from "../lib/api_utils";
 
 export const metadata: Metadata = {
   title: "Latest Posts | Arnaldo Cisneros",
   description: "Latest Posts inblog",
 };
 
-const LatestPostsPage = () => {
-  const latestsArticles: ArticleModel[] = MOCK_ARTICLES;
+const LatestPostsPage = async () => {
+  const response = await getLastestArticlesFromDynamoDB({
+    limit: 8,
+  });
+  const latestsArticles: ArticleModel[] = response.Items;
+
   return (
     <div className={styles.LatestPostsPage}>
       <LatestPostsPageDescription />
