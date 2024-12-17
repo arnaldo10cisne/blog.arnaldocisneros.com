@@ -4,9 +4,9 @@ import { ArticleTitle } from "./ArticleTitle";
 import { ArticlePrimaryArea } from "./ArticlePrimaryArea";
 import { ArticleSecondaryArea } from "./ArticleSecondaryArea";
 import { ArticleModel } from "../lib/models";
-import { MOCK_ARTICLES } from "../lib/mock_data";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { getArticleItemFromDynamoDB } from "../lib/api_utils";
 
 interface ArticlePageProps {
   params: {
@@ -14,11 +14,10 @@ interface ArticlePageProps {
   };
 }
 
-export const generateMetadata = ({ params }: ArticlePageProps) => {
+export const generateMetadata = async ({ params }: ArticlePageProps) => {
   const { article_url } = params;
-  const article: ArticleModel | undefined = MOCK_ARTICLES.find(
-    (art) => art.article_url === article_url,
-  );
+  const response = await getArticleItemFromDynamoDB(article_url);
+  const article: ArticleModel = response.Items[0];
 
   if (!article) {
     return {
@@ -44,15 +43,13 @@ const fetchMDXSource = async (
 const ArticlePage = async ({ params }: ArticlePageProps) => {
   const { article_url } = params;
 
-  const article: ArticleModel | undefined = MOCK_ARTICLES.find(
-    (art) => art.article_url === article_url,
-  );
+  const response = await getArticleItemFromDynamoDB(article_url);
+  const article: ArticleModel = response.Items[0];
 
   if (!article) {
     return <div>ARTICLE NOT FOUND</div>;
   }
 
-  // This URL_PATH must come from a dynamoDB database under the name of article_content_location
   const mdxSource = await fetchMDXSource(article.article_content_location);
 
   return (

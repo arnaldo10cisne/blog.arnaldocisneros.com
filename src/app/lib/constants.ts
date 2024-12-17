@@ -131,3 +131,6 @@ export const CATEGORIES: CategoryModel[] = [
   CATEGORY_DEVDIARY,
   CATEGORY_GRABBAG,
 ];
+
+export const TESTING_URL: string =
+  "https://vm0a7v3r45.execute-api.us-east-1.amazonaws.com/testing/articles";
