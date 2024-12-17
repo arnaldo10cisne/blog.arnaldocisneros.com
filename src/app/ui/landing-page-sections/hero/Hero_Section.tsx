@@ -2,14 +2,18 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Hero_Section.module.scss";
-import { MOCK_HERO_ELEMENTS } from "@/app/lib/mock_data";
 import { HeroElement } from "./HeroElement";
+import { ArticleModel } from "@/app/lib/models";
 
-export const Hero_Section = () => {
+interface LatestPosts_SectionProps {
+  article_list: ArticleModel[];
+}
+
+export const Hero_Section = ({ article_list }: LatestPosts_SectionProps) => {
   const [currentElement, setCurrentElement] = useState<number>(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const heroElements = MOCK_HERO_ELEMENTS;
+  const heroElements = article_list;
 
   const startInterval = () => {
     intervalRef.current = setInterval(() => {
