@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
 import { FONT_NEWSREADER } from "@/app/lib/fonts";
+import { formatDate } from "@/app/lib/utility_functions";
 
 interface ArticleCardProps {
   article: ArticleModel;
@@ -17,6 +18,8 @@ export const ArticleCard = ({
   largeStyle = false,
   showCategory = true,
 }: ArticleCardProps) => {
+  const formattedDate = formatDate(new Date(article.date));
+
   return (
     <Link
       className={
@@ -45,7 +48,7 @@ export const ArticleCard = ({
             FONT_NEWSREADER.className,
           )}
         >
-          {article.title}
+          {formattedDate}|{article.title}
         </h1>
         {largeStyle ? (
           <p className={styles.ArticleCardDescription}>{article.description}</p>
