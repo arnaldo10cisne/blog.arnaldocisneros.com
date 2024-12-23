@@ -34,11 +34,11 @@ export const ArticleCard = ({
           src={article.thumbnail_small}
           alt={article.title}
           fill
-          // width={largeStyle ? 1500 : 768}
-          // height={largeStyle ? 1000 : 512}
         />
       </div>
       <div className={styles.ArticleCardDataContainer}>
+        |LOCAL: {article.local_page_number}|GLOBAL: {article.global_page_number}
+        |
         {showCategory ? (
           <p className={styles.ArticleCardCategoryLabel}>{article.category}</p>
         ) : null}

@@ -27,6 +27,8 @@ export interface ArticleModel {
   tags: string[];
   article_content_location: string; //Direction in S3
   description: string;
+  local_page_number: number;
+  global_page_number: number;
 }
 
 export interface CategoryModel {

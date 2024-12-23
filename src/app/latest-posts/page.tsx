@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const LatestPostsPage = async () => {
   const response = await getLastestArticlesFromDynamoDB({
-    limit: 8,
+    page_number: 3,
   });
   const latestsArticles: ArticleModel[] = response.Items;
 

@@ -3,8 +3,8 @@ import { ArticleCategoriesEnum } from "./models";
 
 interface getLastestArticlesFromDynamoDBParams {
   category?: ArticleCategoriesEnum | null;
-  limit: number;
-  start_key?: string | null;
+  limit?: number;
+  page_number?: number;
 }
 
 interface getHeroArticleItemsFromDynamoDBParams {
@@ -29,19 +29,19 @@ export const getArticleItemFromDynamoDB = async (article_url: string) => {
 export const getHeroArticleItemsFromDynamoDB = async ({
   limit,
 }: getHeroArticleItemsFromDynamoDBParams) => {
-  const limitStringParam = `limit=${String(limit)}`;
+  const limitStringParam = limit ? `limit=${String(limit)}` : "";
   return await fetchData(`${TESTING_URL}?${limitStringParam}&highlight=true`);
 };
 
 export const getLastestArticlesFromDynamoDB = async ({
   category = null,
   limit,
-  start_key = null,
+  page_number = 1,
 }: getLastestArticlesFromDynamoDBParams) => {
   const categoryStringParam = category ? `category=${category}` : "";
-  const limitStringParam = `limit=${String(limit)}`;
-  const startKeyStringParam = start_key ? `start_key=${start_key}` : "";
+  const limitStringParam = limit ? `&limit=${String(limit)}` : "";
+  const pageNumberStringParam = `&page_number=${page_number}`;
   return await fetchData(
-    `${TESTING_URL}?${categoryStringParam}&${limitStringParam}&${startKeyStringParam}`,
+    `${TESTING_URL}?${categoryStringParam}${limitStringParam}${pageNumberStringParam}`,
   );
 };

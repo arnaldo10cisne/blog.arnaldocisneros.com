@@ -45,8 +45,7 @@ const CategoryTypePage = async ({ params }: CategoryTypePageProps) => {
 
   const response = await getLastestArticlesFromDynamoDB({
     category: category.type,
-    limit: 8,
-    start_key: null,
+    page_number: 1,
   });
   const articles_list: ArticleModel[] = response.Items;
 
