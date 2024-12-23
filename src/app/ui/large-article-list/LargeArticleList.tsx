@@ -6,6 +6,7 @@ import { ArticleModel, CategoryModel } from "@/app/lib/models";
 import { ArticleCard } from "../article-card/ArticleCard";
 import { getLastestArticlesFromDynamoDB } from "@/app/lib/api_utils";
 import { ARTICLES_PER_PAGE } from "@/app/lib/constants";
+import { PaginationComponent } from "./PaginationComponent";
 
 interface LargeArticleListProps {
   category?: CategoryModel;
@@ -69,42 +70,39 @@ export const LargeArticleList = ({
 
   return (
     <div className={styles.LargeArticleList}>
-      {articleList.map((art) => (
-        <ArticleCard
-          key={art.id}
-          article={art}
-          largeStyle={true}
-          showCategory={showCategory}
+      {/* Controles de Paginación superior */}
+      {totalPages > 1 && (
+        <PaginationComponent
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+          handlePageChange={handlePageChange}
+          currentPage={currentPage}
+          totalPages={totalPages}
         />
-      ))}
+      )}
 
-      {totalPages > 1 ? (
-        <>
-          {/* Pagination Controls */}
-          <button onClick={handlePrevPage} disabled={currentPage === 1}>
-            Prev
-          </button>
+      {/* Lista de Artículos */}
+      <div className={styles.articleList}>
+        {articleList.map((art) => (
+          <ArticleCard
+            key={art.id}
+            article={art}
+            largeStyle={true}
+            showCategory={showCategory}
+          />
+        ))}
+      </div>
 
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-            (pageNumber) => (
-              <button
-                key={pageNumber}
-                onClick={() => handlePageChange(pageNumber)}
-                disabled={pageNumber === currentPage}
-              >
-                go to page {pageNumber}
-              </button>
-            ),
-          )}
-
-          <button
-            onClick={handleNextPage}
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
-        </>
-      ) : null}
+      {/* Controles de Paginación inferior */}
+      {totalPages > 1 && (
+        <PaginationComponent
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+          handlePageChange={handlePageChange}
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
+      )}
     </div>
   );
 };

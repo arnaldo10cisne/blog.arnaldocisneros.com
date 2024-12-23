@@ -135,4 +135,4 @@ export const CATEGORIES: CategoryModel[] = [
 export const TESTING_URL: string =
   "https://vm0a7v3r45.execute-api.us-east-1.amazonaws.com/testing/articles";
 
-export const ARTICLES_PER_PAGE: number = 3;
+export const ARTICLES_PER_PAGE: number = 6;
