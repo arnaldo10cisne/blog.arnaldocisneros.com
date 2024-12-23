@@ -1,10 +1,9 @@
 import { CATEGORIES } from "@/app/lib/constants";
-import { ArticleModel, CategoryModel } from "@/app/lib/models";
+import { CategoryModel } from "@/app/lib/models";
 import { CategoryDescription } from "@/app/categories/[category_type]/CategoryDescription";
 import React from "react";
 import { LargeArticleList } from "@/app/ui/large-article-list/LargeArticleList";
 import styles from "./CategoryTypePage.module.scss";
-import { getLastestArticlesFromDynamoDB } from "@/app/lib/api_utils";
 
 interface CategoryTypePageProps {
   params: {
@@ -43,12 +42,6 @@ const CategoryTypePage = async ({ params }: CategoryTypePageProps) => {
     return <>CATEGORY NOT FOUND // REMEMBER TO IMPLEMENT A 404 ERROR PAGE</>;
   }
 
-  const response = await getLastestArticlesFromDynamoDB({
-    category: category.type,
-    page_number: 1,
-  });
-  const articles_list: ArticleModel[] = response.Items;
-
   return (
     <div className={styles.CategoryTypePage}>
       <CategoryDescription
@@ -56,7 +49,7 @@ const CategoryTypePage = async ({ params }: CategoryTypePageProps) => {
         description={category.description}
       />
 
-      <LargeArticleList article_list={articles_list} />
+      <LargeArticleList category={category} />
     </div>
   );
 };
