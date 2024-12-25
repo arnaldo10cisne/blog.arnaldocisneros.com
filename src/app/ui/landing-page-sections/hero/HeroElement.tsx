@@ -31,7 +31,13 @@ export const HeroElement = ({ element }: HeroElementProps) => {
         >
           {element.description}
         </p>
-        <Link href={element.article_url} className={styles.ActionLinkButton}>
+        <Link
+          href={element.article_url}
+          className={classNames(
+            styles.ActionLinkButton,
+            FONT_PALANQUIN.className,
+          )}
+        >
           <div>I want to know more!</div>
         </Link>
       </div>
