@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./NavbarLink.module.scss";
 import { NavigationLinkModel } from "@/app/lib/models";
+import { FONT_PALANQUIN } from "@/app/lib/fonts";
 
 export const NavbarLink = ({
   label,
@@ -19,7 +20,7 @@ export const NavbarLink = ({
     <Link
       key={label}
       href={href}
-      className={`${styles.Link} ${isCurrent && !isSelectorOption ? styles.isCurrent : null} ${isSelectorOption ? styles.isSelectorOption : null}`}
+      className={`${styles.Link} ${isCurrent && !isSelectorOption ? styles.isCurrent : null} ${isSelectorOption ? styles.isSelectorOption : null} ${FONT_PALANQUIN.className}`}
       target={newTab ? "_blank" : "_self"}
     >
       {label}

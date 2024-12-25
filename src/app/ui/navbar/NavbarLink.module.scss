@@ -1,8 +1,8 @@
 @import "../../lib/variables";
 
 .Link {
-  padding: 15px 40px 15px 10px;
-  height: $navbar-link-height;
+  padding: 15px 30px 15px 30px;
+  font-weight: bold;
   &:hover {
     background-color: black;
     color: white;

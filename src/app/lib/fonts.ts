@@ -4,6 +4,7 @@ import {
   Roboto_Condensed,
   Roboto_Slab,
   Newsreader,
+  Palanquin,
 } from "next/font/google";
 
 export const FONT_MONTSERRAT = Montserrat({
@@ -27,6 +28,11 @@ export const FONT_ROBOTO_SLAB = Roboto_Slab({
 });
 
 export const FONT_NEWSREADER = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export const FONT_PALANQUIN = Palanquin({
   subsets: ["latin"],
   weight: ["400", "700"],
 });

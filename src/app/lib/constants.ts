@@ -3,7 +3,11 @@ import {
   ArticleCategoriesEnum,
   CategoryModel,
   NavigationLinkModel,
+  SocialMediaLink,
 } from "./models";
+import GITHUB_ICON from "./assets/svg/github_icon.svg";
+import LINKEDIN_ICON from "./assets/svg/linkedin_logo.svg";
+import X_ICON from "./assets/svg/x_icon.svg";
 
 export const HOME_LINK: NavigationLinkModel = {
   label: "HOME",
@@ -136,3 +140,27 @@ export const TESTING_URL: string =
   "https://vm0a7v3r45.execute-api.us-east-1.amazonaws.com/testing/articles";
 
 export const ARTICLES_PER_PAGE: number = 6;
+
+export const GITHUB_LINK: SocialMediaLink = {
+  label: "GitHub",
+  href: "https://github.com/arnaldo10cisne",
+  icon: GITHUB_ICON,
+};
+
+export const LINKEDIN_LINK: SocialMediaLink = {
+  label: "Linkedin",
+  href: "https://www.linkedin.com/in/arnaldo10cisne/",
+  icon: LINKEDIN_ICON,
+};
+
+export const X_LINK: SocialMediaLink = {
+  label: "X",
+  href: "https://x.com/arnaldo10cisne",
+  icon: X_ICON,
+};
+
+export const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
+  GITHUB_LINK,
+  LINKEDIN_LINK,
+  X_LINK,
+];

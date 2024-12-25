@@ -45,3 +45,9 @@ export interface HeroElementModel {
   description: string;
   article_url: string;
 }
+
+export interface SocialMediaLink {
+  label: string;
+  href: string;
+  icon: string;
+}
