@@ -44,26 +44,10 @@ export const Hero_Section = ({ article_list }: LatestPosts_SectionProps) => {
 
   return (
     <section className={styles.Hero_Section}>
-      <button
-        className={styles.PreviousButton}
-        onClick={() =>
-          goToElement(
-            (currentElement - 1 + heroElements.length) % heroElements.length,
-          )
-        }
-      >
-        PREVIOUS
-      </button>
       <HeroElement
         key={currentElement}
         element={heroElements[currentElement]}
       />
-      <button
-        className={styles.NextButton}
-        onClick={() => goToElement((currentElement + 1) % heroElements.length)}
-      >
-        NEXT
-      </button>
       <div className={styles.ElementsNavigation}>
         {heroElements.map((element, index) => {
           return (

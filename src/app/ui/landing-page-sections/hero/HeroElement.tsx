@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./HeroElement.module.scss";
 import { HeroElementModel } from "@/app/lib/models";
 import Link from "next/link";
-import Image from "next/image";
+import classNames from "classnames";
+import { FONT_ABHAYA_LIBRE, FONT_PALANQUIN } from "@/app/lib/fonts";
 
 interface HeroElementProps {
   element: HeroElementModel;
@@ -18,9 +19,18 @@ export const HeroElement = ({ element }: HeroElementProps) => {
       />
 
       <div className={styles.Foreground}>
-        <p>{element.category}</p>
-        <h1>{element.title}</h1>
-        <p>{element.description}</p>
+        {/* <p>{element.category}</p> */}
+        <h1 className={classNames(styles.Title, FONT_PALANQUIN.className)}>
+          {element.title}
+        </h1>
+        <p
+          className={classNames(
+            styles.Description,
+            FONT_ABHAYA_LIBRE.className,
+          )}
+        >
+          {element.description}
+        </p>
         <Link href={element.article_url} className={styles.ActionLinkButton}>
           <div>I want to know more!</div>
         </Link>
