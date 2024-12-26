@@ -8,6 +8,7 @@ import {
 import GITHUB_ICON from "./assets/svg/github_icon.svg";
 import LINKEDIN_ICON from "./assets/svg/linkedin_logo.svg";
 import X_ICON from "./assets/svg/x_icon.svg";
+import GRABBAG_CATEGORY_ICON from "./assets/svg/grab-bag-icon-white.svg";
 
 export const HOME_LINK: NavigationLinkModel = {
   label: "HOME",
@@ -85,6 +86,7 @@ export const CATEGORY_DEVELOPING: CategoryModel = {
   path: `developing`,
   label: "Developing",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORY_CLOUD: CategoryModel = {
@@ -93,6 +95,7 @@ export const CATEGORY_CLOUD: CategoryModel = {
   path: `cloud`,
   label: "Cloud",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORY_LIFESTYLE: CategoryModel = {
@@ -101,6 +104,7 @@ export const CATEGORY_LIFESTYLE: CategoryModel = {
   path: `lifestyle`,
   label: "Lifestyle",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORY_GAMEDEV: CategoryModel = {
@@ -109,6 +113,7 @@ export const CATEGORY_GAMEDEV: CategoryModel = {
   path: `gamedev`,
   label: "Game Development",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORY_DEVDIARY: CategoryModel = {
@@ -117,6 +122,7 @@ export const CATEGORY_DEVDIARY: CategoryModel = {
   path: `dev-diary`,
   label: "Developer Diary",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORY_GRABBAG: CategoryModel = {
@@ -125,6 +131,7 @@ export const CATEGORY_GRABBAG: CategoryModel = {
   path: `grab-bag`,
   label: "Grab Bag",
   thumbnail: "/category/thumbnail",
+  icon: GRABBAG_CATEGORY_ICON,
 };
 
 export const CATEGORIES: CategoryModel[] = [

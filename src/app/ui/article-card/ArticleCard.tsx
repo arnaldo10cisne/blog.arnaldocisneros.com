@@ -4,8 +4,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-import { FONT_NEWSREADER } from "@/app/lib/fonts";
+import { FONT_ABHAYA_LIBRE, FONT_PALANQUIN } from "@/app/lib/fonts";
 import { formatDate } from "@/app/lib/utility_functions";
+import { CATEGORIES } from "@/app/lib/constants";
 
 interface ArticleCardProps {
   article: ArticleModel;
@@ -19,6 +20,9 @@ export const ArticleCard = ({
   showCategory = true,
 }: ArticleCardProps) => {
   const formattedDate = formatDate(new Date(article.date));
+  const category = CATEGORIES.find(
+    (category) => category.type === article.category,
+  );
 
   return (
     <Link
@@ -28,6 +32,23 @@ export const ArticleCard = ({
       key={article.id}
       href={`/${article.article_url}`}
     >
+      {showCategory ? (
+        <p
+          className={classNames(
+            styles.ArticleCardCategoryLabel,
+            FONT_PALANQUIN.className,
+            styles[`${category?.type}-color`],
+          )}
+        >
+          {" "}
+          <Image
+            className={styles.ArticleCardCategoryIcon}
+            src={category?.icon}
+            alt={`${category?.type}-icon`}
+          />{" "}
+          {category?.label}
+        </p>
+      ) : null}
       <div className={styles.ArticleCardImageContainer}>
         <Image
           className={styles.ArticleCardImage}
@@ -37,18 +58,21 @@ export const ArticleCard = ({
         />
       </div>
       <div className={styles.ArticleCardDataContainer}>
-        |LOCAL: {article.local_page_number}|GLOBAL: {article.global_page_number}
-        |
-        {showCategory ? (
-          <p className={styles.ArticleCardCategoryLabel}>{article.category}</p>
-        ) : null}
+        <p
+          className={classNames(
+            styles.ArticleCardDate,
+            FONT_ABHAYA_LIBRE.className,
+          )}
+        >
+          {formattedDate}
+        </p>
         <h1
           className={classNames(
             styles.ArticleCardTitle,
-            FONT_NEWSREADER.className,
+            FONT_PALANQUIN.className,
           )}
         >
-          {formattedDate}|{article.title}
+          {article.title}
         </h1>
         {largeStyle ? (
           <p className={styles.ArticleCardDescription}>{article.description}</p>

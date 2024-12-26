@@ -1,14 +1,49 @@
 .LatestPosts_Section {
   width: 100vw;
-  height: 770px;
+  height: 540px;
 
-  background-color: honeydew;
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 54, 1) 0px,
+    rgba(33, 33, 54, 1) 220px,
+    rgba(33, 33, 54, 0.1) 220px,
+    rgba(33, 33, 54, 0.1) 540px
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // padding: 0px 300px;
 }
 
 .ArticleList {
   display: flex;
+}
+
+.LatestPosts_Section__Header {
+  display: flex;
+  align-items: baseline;
+  width: 1220px; // 4 times the size of the article cell
+}
+
+.LatestPosts_Section__Title {
+  color: white;
+  font-size: 32px;
+  margin-right: 20px;
+}
+
+.LatestPosts_Section__Link {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 100;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.LatestPosts_Section__LinkArrowContainer {
+  margin-left: 5px;
 }

@@ -1,6 +1,7 @@
 import {
   Montserrat,
   Lusitana,
+  Roboto,
   Roboto_Condensed,
   Roboto_Slab,
   Newsreader,
@@ -41,4 +42,9 @@ export const FONT_PALANQUIN = Palanquin({
 export const FONT_ABHAYA_LIBRE = Abhaya_Libre({
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+export const FONT_ROBOTO = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "400", "700"],
 });

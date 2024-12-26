@@ -37,6 +37,7 @@ export interface CategoryModel {
   path: string;
   label: string;
   thumbnail: string;
+  icon: any;
 }
 
 export interface HeroElementModel {
