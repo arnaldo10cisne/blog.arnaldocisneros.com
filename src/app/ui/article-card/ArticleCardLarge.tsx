@@ -35,7 +35,8 @@ export const ArticleCardLarge = ({
           className={styles.ArticleCardImage}
           src={article.thumbnail_small}
           alt={article.title}
-          fill
+          width={500}
+          height={260}
         />
       </div>
       <div className={styles.ArticleCardDataContainer}>
