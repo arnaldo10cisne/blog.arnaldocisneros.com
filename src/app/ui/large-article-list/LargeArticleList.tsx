@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./LargeArticleList.module.scss";
 import { ArticleModel, CategoryModel } from "@/app/lib/models";
-import { ArticleCard } from "../article-card/ArticleCard";
 import { getLastestArticlesFromDynamoDB } from "@/app/lib/api_utils";
 import { ARTICLES_PER_PAGE } from "@/app/lib/constants";
 import { PaginationComponent } from "./PaginationComponent";
+import { ArticleCardLarge } from "../article-card/ArticleCardLarge";
 
 interface LargeArticleListProps {
   category?: CategoryModel;
@@ -84,10 +84,9 @@ export const LargeArticleList = ({
       {/* Lista de Artículos */}
       <div className={styles.articleList}>
         {articleList.map((art) => (
-          <ArticleCard
+          <ArticleCardLarge
             key={art.id}
             article={art}
-            largeStyle={true}
             showCategory={showCategory}
           />
         ))}

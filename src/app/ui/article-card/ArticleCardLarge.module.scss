@@ -1,16 +1,14 @@
-.ArticleCard {
+.ArticleCardLarge {
   position: relative;
-  width: 265px;
-  height: 360px;
+  width: 1120px;
+  height: 260px;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  margin: 20px;
   -webkit-box-shadow: 5px 6px 15px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 5px 6px 15px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 5px 6px 15px 0px rgba(0, 0, 0, 0.25);
-  background-color: white;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
 }
 
 .ArticleCardImageContainer {

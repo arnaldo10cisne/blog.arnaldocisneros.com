@@ -1,5 +1,5 @@
 import { ArticleModel } from "@/app/lib/models";
-import styles from "./ArticleCard.module.scss";
+import styles from "./ArticleCardLarge.module.scss";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,15 +9,15 @@ import { formatDate } from "@/app/lib/utility_functions";
 import { CATEGORIES } from "@/app/lib/constants";
 import { CategoryLabel } from "./CategoryLabel";
 
-interface ArticleCardProps {
+interface ArticleCardLargeProps {
   article: ArticleModel;
   showCategory?: boolean;
 }
 
-export const ArticleCard = ({
+export const ArticleCardLarge = ({
   article,
   showCategory = true,
-}: ArticleCardProps) => {
+}: ArticleCardLargeProps) => {
   const formattedDate = formatDate(new Date(article.date));
   const category = CATEGORIES.find(
     (category) => category.type === article.category,
@@ -25,7 +25,7 @@ export const ArticleCard = ({
 
   return (
     <Link
-      className={styles.ArticleCard}
+      className={styles.ArticleCardLarge}
       key={article.id}
       href={`/${article.article_url}`}
     >
@@ -55,6 +55,7 @@ export const ArticleCard = ({
         >
           {article.title}
         </h1>
+        <p className={styles.ArticleCardDescription}>{article.description}</p>
       </div>
     </Link>
   );
