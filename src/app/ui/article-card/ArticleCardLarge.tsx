@@ -56,7 +56,14 @@ export const ArticleCardLarge = ({
         >
           {article.title}
         </h1>
-        <p className={styles.ArticleCardDescription}>{article.description}</p>
+        <p
+          className={classNames(
+            styles.ArticleCardDescription,
+            FONT_ABHAYA_LIBRE.className,
+          )}
+        >
+          {article.description}
+        </p>
       </div>
     </Link>
   );

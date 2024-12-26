@@ -36,7 +36,7 @@ export const FONT_NEWSREADER = Newsreader({
 
 export const FONT_PALANQUIN = Palanquin({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "300", "400", "700"],
 });
 
 export const FONT_ABHAYA_LIBRE = Abhaya_Libre({
