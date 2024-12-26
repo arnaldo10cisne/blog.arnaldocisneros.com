@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export interface NavigationLinkModel {
   label: string;
   href: string;
@@ -37,7 +39,7 @@ export interface CategoryModel {
   path: string;
   label: string;
   thumbnail: string;
-  icon: string;
+  icon: StaticImport;
 }
 
 export interface HeroElementModel {
