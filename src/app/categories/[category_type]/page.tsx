@@ -1,9 +1,9 @@
 import { CATEGORIES } from "@/app/lib/constants";
 import { CategoryModel } from "@/app/lib/models";
-import { CategoryDescription } from "@/app/categories/[category_type]/CategoryDescription";
 import React from "react";
 import { LargeArticleList } from "@/app/ui/large-article-list/LargeArticleList";
 import styles from "./CategoryTypePage.module.scss";
+import { PageHeader } from "@/app/ui/pageHeader/PageHeader";
 
 interface CategoryTypePageProps {
   params: {
@@ -44,10 +44,7 @@ const CategoryTypePage = async ({ params }: CategoryTypePageProps) => {
 
   return (
     <div className={styles.CategoryTypePage}>
-      <CategoryDescription
-        label={category.label}
-        description={category.description}
-      />
+      <PageHeader title={category.label} description={category.description} />
 
       <LargeArticleList category={category} />
     </div>

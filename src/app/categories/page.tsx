@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
-import { CategoriesPageDescription } from "./CategoriesPageDescription";
 import { CategoriesPageList } from "./CategoriesPageList";
+import { PageHeader } from "../ui/pageHeader/PageHeader";
 
 export const metadata: Metadata = {
   title: "Categories | Arnaldo Cisneros",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const CategoriesPage = () => {
   return (
     <>
-      <CategoriesPageDescription />
+      <PageHeader title={"Categories"} description={"Categories of articles"} />
       <CategoriesPageList />
     </>
   );

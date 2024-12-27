@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import React from "react";
-import { LatestPostsPageDescription } from "./LatestPostsPageDescription";
 import { LargeArticleList } from "../ui/large-article-list/LargeArticleList";
 import styles from "./LatestPostsPage.module.scss";
+import { PageHeader } from "../ui/pageHeader/PageHeader";
 
 export const metadata: Metadata = {
   title: "Latest Posts | Arnaldo Cisneros",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const LatestPostsPage = async () => {
   return (
     <div className={styles.LatestPostsPage}>
-      <LatestPostsPageDescription />
+      <PageHeader title={"Latest Posts"} description={"Latest Posts in blog"} />
       <LargeArticleList />
     </div>
   );
