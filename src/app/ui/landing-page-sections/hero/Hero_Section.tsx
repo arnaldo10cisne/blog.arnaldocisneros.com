@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Hero_Section.module.scss";
 import { HeroElement } from "./HeroElement";
 import { ArticleModel } from "@/app/lib/models";
+import { Hero_Section_btn } from "./Hero_Section_btn";
 
 interface LatestPosts_SectionProps {
   article_list: ArticleModel[];
@@ -49,17 +50,15 @@ export const Hero_Section = ({ article_list }: LatestPosts_SectionProps) => {
         element={heroElements[currentElement]}
       />
       <div className={styles.ElementsNavigation}>
-        {heroElements.map((element, index) => {
-          return (
-            <button
-              key={element.title}
-              onClick={() => goToElement(index)}
-              className={styles.ElementsNavigationButton}
-            >
-              {`Go to ${heroElements.indexOf(element) + 1}`}
-            </button>
-          );
-        })}
+        {heroElements.map((element, index) => (
+          <Hero_Section_btn
+            key={element.title}
+            element={element}
+            index={index}
+            navigationFunction={goToElement}
+            isCurrent={index === currentElement}
+          />
+        ))}
       </div>
     </section>
   );

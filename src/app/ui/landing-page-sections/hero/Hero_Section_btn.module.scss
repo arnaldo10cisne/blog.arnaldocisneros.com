@@ -1,0 +1,51 @@
+.ElementsNavigationButton {
+  width: 30px;
+  height: 52px;
+  background-color: rgba(33, 33, 54, 1);
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  cursor: pointer;
+  transform: translateY(30px);
+}
+
+.ElementsNavigationButton__Current {
+  /* 
+    Asignamos una animación que dura 0.5s,
+    con "ease-in-out" para que sea más suave,
+    y "forwards" para que conserve el estado final.
+  */
+  animation: emergeFromBottom 0.5s ease-in-out forwards;
+}
+
+@keyframes emergeFromBottom {
+  0% {
+    transform: translateY(30px);
+    // opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+}
+
+.ElementsNavigationButton__Indicator {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(234, 208, 23, 1);
+  border-radius: 10px;
+  top: 10px;
+  left: 25%;
+  animation: disolveIn 0.5s ease-in-out forwards;
+}
+
+@keyframes disolveIn {
+  0% {
+    // transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    // transform: translateY(0);
+    opacity: 1;
+  }
+}

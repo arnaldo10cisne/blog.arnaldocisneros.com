@@ -23,8 +23,12 @@
 
 .ElementsNavigation {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: 0;
+  left: 173px;
   transform: translateX(-50%);
   z-index: 20;
+  display: flex;
+  column-gap: 15px;
+  align-items: baseline;
+  width: 200px;
 }
