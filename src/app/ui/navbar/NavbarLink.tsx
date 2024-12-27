@@ -7,6 +7,7 @@ import styles from "./NavbarLink.module.scss";
 import { NavigationLinkModel } from "@/app/lib/models";
 import { FONT_PALANQUIN } from "@/app/lib/fonts";
 import classNames from "classnames";
+import { removeWhitespaces } from "@/app/lib/utility_functions";
 
 export const NavbarLink = ({
   label,
@@ -25,6 +26,7 @@ export const NavbarLink = ({
         styles.Link,
         isCurrent && !isSelectorOption ? styles.isCurrent : null,
         isSelectorOption ? styles.isSelectorOption : null,
+        isSelectorOption ? styles[`${removeWhitespaces(label)}-option`] : null,
         FONT_PALANQUIN.className,
       )}
       target={newTab ? "_blank" : "_self"}

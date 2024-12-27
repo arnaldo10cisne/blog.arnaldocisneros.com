@@ -3,23 +3,53 @@
 .Link {
   padding: 15px 30px 15px 30px;
   font-weight: bold;
+  transition: background-color 0.2s;
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 
 .isCurrent {
   background-color: black;
-  color: white;
 }
 
 .isSelectorOption {
-  margin-left: -10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  animation: fadeIn 0.2s forwards;
+  opacity: 0;
+  transition: background-color;
   &:hover {
     background-color: black;
-    color: white;
   }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.CLOUD-option:hover {
+  background: linear-gradient(90deg, black, #00bfff);
+}
+
+.GAMEDEV-option:hover {
+  background: linear-gradient(90deg, black, #8d3b72);
+}
+
+.DEVDIARY-option:hover {
+  background: linear-gradient(90deg, black, #5e8c61);
+}
+
+.LIFESTYLE-option:hover {
+  background: linear-gradient(90deg, black, #ff007f);
+}
+
+.DEVELOPING-option:hover {
+  background: linear-gradient(90deg, black, #2a2a72);
+}
+
+.THEGRABBAG-option:hover {
+  background: linear-gradient(90deg, black, #f27059);
 }

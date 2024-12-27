@@ -14,3 +14,7 @@ export const capitalizeWords = (str: string) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 };
+
+export const removeWhitespaces = (str: string) => {
+  return str.replace(/\s/g, "");
+};

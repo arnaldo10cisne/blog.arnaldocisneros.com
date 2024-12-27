@@ -1,18 +1,17 @@
 @import "../../lib/variables";
 
-.Selector {
-  padding: 15px 0px 15px 0px;
+.NavbarSelector {
+  display: flex;
+  flex-direction: column;
+}
+
+.OptionsContainer {
   position: relative;
-  &:hover {
-    background-color: black;
-    color: white;
-  }
 }
 
 .OptionsList {
   position: absolute;
   display: flex;
-  top: $navbar-link-height;
   flex-direction: column;
   width: 200px;
 }
