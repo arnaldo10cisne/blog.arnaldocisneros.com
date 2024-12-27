@@ -2,6 +2,10 @@
 
 import React from "react";
 import styles from "./PaginationComponent.module.scss";
+import classNames from "classnames";
+import { FONT_MONTSERRAT } from "@/app/lib/fonts";
+import RIGTH_ARROW_ICON from "@/app/lib/assets/svg/arrow_icon.svg";
+import Image from "next/image";
 
 interface PaginationComponentProps {
   handlePrevPage: () => void;
@@ -20,21 +24,33 @@ export const PaginationComponent = ({
 }: PaginationComponentProps) => {
   return (
     <div className={styles.pagination}>
-      <button
-        className={styles.paginationButton}
-        onClick={handlePrevPage}
-        disabled={currentPage === 1}
-      >
-        Prev
-      </button>
+      {currentPage === 1 ? null : (
+        <button
+          className={classNames(
+            styles.paginationButtonDirection,
+            FONT_MONTSERRAT.className,
+          )}
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+        >
+          <Image
+            src={RIGTH_ARROW_ICON}
+            alt={"arrow-icon"}
+            style={{ rotate: "180deg" }}
+          />{" "}
+          Previous
+        </button>
+      )}
 
       {Array.from({ length: totalPages }, (_, i) => i + 1).map(
         (pageNumber: number) => (
           <button
             key={pageNumber}
-            className={`${styles.paginationButton} ${
-              currentPage === pageNumber ? styles.activePage : ""
-            }`}
+            className={classNames(
+              styles.paginationButtonNumber,
+              currentPage === pageNumber ? styles.activePage : "",
+              FONT_MONTSERRAT.className,
+            )}
             onClick={() => handlePageChange(pageNumber)}
             disabled={pageNumber === currentPage}
           >
@@ -43,13 +59,18 @@ export const PaginationComponent = ({
         ),
       )}
 
-      <button
-        className={styles.paginationButton}
-        onClick={handleNextPage}
-        disabled={currentPage === totalPages}
-      >
-        Next
-      </button>
+      {currentPage === totalPages ? null : (
+        <button
+          className={classNames(
+            styles.paginationButtonDirection,
+            FONT_MONTSERRAT.className,
+          )}
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+        >
+          Next <Image src={RIGTH_ARROW_ICON} alt={"arrow-icon"} />
+        </button>
+      )}
     </div>
   );
 };
