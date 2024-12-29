@@ -38,7 +38,7 @@ export interface CategoryModel {
   description: string;
   path: string;
   label: string;
-  thumbnail: string;
+  thumbnail: string | StaticImport;
   icon: StaticImport;
 }
 

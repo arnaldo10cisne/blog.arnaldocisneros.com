@@ -9,6 +9,7 @@ import GITHUB_ICON from "./assets/svg/github_icon.svg";
 import LINKEDIN_ICON from "./assets/svg/linkedin_logo.svg";
 import X_ICON from "./assets/svg/x_icon.svg";
 import GRABBAG_CATEGORY_ICON from "./assets/svg/grab-bag-icon-white.svg";
+import BACKGROUND_IMAGE_MOCK from "./assets/mock-image.webp";
 
 export const HOME_LINK: NavigationLinkModel = {
   label: "HOME",
@@ -85,7 +86,7 @@ export const CATEGORY_DEVELOPING: CategoryModel = {
   description: "Articles about Developing",
   path: `developing`,
   label: "Developing",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
@@ -94,7 +95,7 @@ export const CATEGORY_CLOUD: CategoryModel = {
   description: "Articles about Cloud",
   path: `cloud`,
   label: "Cloud",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
@@ -103,7 +104,7 @@ export const CATEGORY_LIFESTYLE: CategoryModel = {
   description: "Articles about Lifestyle",
   path: `lifestyle`,
   label: "Lifestyle",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
@@ -112,7 +113,7 @@ export const CATEGORY_GAMEDEV: CategoryModel = {
   description: "Articles about Game Development",
   path: `gamedev`,
   label: "Game Development",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
@@ -121,7 +122,7 @@ export const CATEGORY_DEVDIARY: CategoryModel = {
   description: "Articles about Developer diaries",
   path: `dev-diary`,
   label: "Developer Diary",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
@@ -130,7 +131,7 @@ export const CATEGORY_GRABBAG: CategoryModel = {
   description: "Articles with varied topics",
   path: `grab-bag`,
   label: "Grab Bag",
-  thumbnail: "/category/thumbnail",
+  thumbnail: BACKGROUND_IMAGE_MOCK,
   icon: GRABBAG_CATEGORY_ICON,
 };
 
