@@ -29,7 +29,7 @@
 .LatestPosts_Section__Title {
   color: white;
   font-size: 32px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .LatestPosts_Section__Link {
@@ -38,7 +38,7 @@
   color: white;
   font-size: 16px;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 400;
   &:hover {
     text-decoration: underline;
   }
@@ -46,4 +46,5 @@
 
 .LatestPosts_Section__LinkArrowContainer {
   margin-left: 5px;
+  margin-bottom: -3px;
 }
