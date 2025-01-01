@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ArticleTitle.module.scss";
 import Image from "next/image";
+import classNames from "classnames";
+import { FONT_ABHAYA_LIBRE, FONT_PALANQUIN } from "../lib/fonts";
 
 interface ArticleTitleProps {
   title: string;
@@ -14,15 +16,32 @@ export const ArticleTitle = ({
   thumbnail_large,
 }: ArticleTitleProps) => {
   return (
-    <section className={styles.ArticleTitleSection}>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
+    <header className={styles.ArticleTitle}>
       <Image
+        className={styles.Background}
         src={thumbnail_large}
         alt="article-thumbnail"
-        width={100}
-        height={100}
+        width={1800}
+        height={764}
       />
-    </section>
+      <div className={classNames(styles.Foreground)}>
+        <h1
+          className={classNames(
+            styles.ArticleTitleTitle,
+            FONT_PALANQUIN.className,
+          )}
+        >
+          {title}
+        </h1>
+        <p
+          className={classNames(
+            styles.ArticleTitleSubtitle,
+            FONT_ABHAYA_LIBRE.className,
+          )}
+        >
+          {subtitle}
+        </p>
+      </div>
+    </header>
   );
 };
