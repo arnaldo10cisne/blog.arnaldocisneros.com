@@ -16,6 +16,7 @@
   top: 0;
   z-index: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 .Foreground {
@@ -32,12 +33,14 @@
   color: white;
   font-size: 100px;
   margin-top: 150px;
+  text-align: center;
 }
 
 .PageHeaderDescription {
   color: white;
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 }
 
 .Developing-backgroundcolor {
