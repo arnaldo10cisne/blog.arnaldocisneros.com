@@ -7,6 +7,7 @@ import { getLastestArticlesFromDynamoDB } from "@/app/lib/api_utils";
 import { ARTICLES_PER_PAGE } from "@/app/lib/constants";
 import { PaginationComponent } from "./PaginationComponent";
 import { ArticleCardLarge } from "../article-card/ArticleCardLarge";
+import classNames from "classnames";
 
 interface LargeArticleListProps {
   category?: CategoryModel;
@@ -69,7 +70,12 @@ export const LargeArticleList = ({
   };
 
   return (
-    <div className={styles.LargeArticleList}>
+    <div
+      className={classNames(
+        styles.LargeArticleList,
+        totalPages > 1 ? "" : styles.noPagination,
+      )}
+    >
       {/* Controles de Paginación superior */}
       {totalPages > 1 && (
         <PaginationComponent
