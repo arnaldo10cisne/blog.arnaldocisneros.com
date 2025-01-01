@@ -7,6 +7,7 @@ import {
   Newsreader,
   Palanquin,
   Abhaya_Libre,
+  Roboto_Serif,
 } from "next/font/google";
 
 export const FONT_MONTSERRAT = Montserrat({
@@ -47,4 +48,9 @@ export const FONT_ABHAYA_LIBRE = Abhaya_Libre({
 export const FONT_ROBOTO = Roboto({
   subsets: ["latin"],
   weight: ["100", "400", "700"],
+});
+
+export const FONT_ROBOTO_SERIF = Roboto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });

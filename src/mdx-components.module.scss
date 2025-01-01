@@ -1,0 +1,13 @@
+.Link {
+  color: #007acc;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.ListItem {
+  margin-bottom: 10px;
+  margin-left: 80px;
+  font-size: 20px;
+}
