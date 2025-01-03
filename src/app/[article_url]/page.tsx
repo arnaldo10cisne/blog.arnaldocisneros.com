@@ -61,7 +61,7 @@ const ArticlePage = async ({ params }: ArticlePageProps) => {
       />
       <main className={styles.ArticleMainArea}>
         <ArticlePrimaryArea mdxSource={mdxSource} />
-        <ArticleSecondaryArea />
+        {/* <ArticleSecondaryArea /> */}
       </main>
     </article>
   );
