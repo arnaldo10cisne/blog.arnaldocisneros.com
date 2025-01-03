@@ -16,7 +16,7 @@ export const CustomCodeBlock = ({ props }: CustomCodeBlockProps) => {
   const code = props.code || props.children;
 
   return (
-    <pre className={classNames(styles.CustomCodeBlock)}>
+    <div className={classNames(styles.CustomCodeBlock)}>
       <CopyBlock
         text={code}
         language={props.language}
@@ -24,6 +24,6 @@ export const CustomCodeBlock = ({ props }: CustomCodeBlockProps) => {
         theme={dracula}
         codeBlock={true}
       />
-    </pre>
+    </div>
   );
 };
