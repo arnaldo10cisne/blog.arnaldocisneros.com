@@ -4,7 +4,7 @@ import { ArticleImage } from "./mdxCustomComponents/ArticleImage/ArticleImage";
 import { Subtitle } from "./mdxCustomComponents/Subtitle/Subtitle";
 import classNames from "classnames";
 import { FONT_ROBOTO_SERIF } from "./app/lib/fonts";
-import { CodeBlock } from "./mdxCustomComponents/CodeBlock/CodeBlock";
+import { CustomCodeBlock } from "./mdxCustomComponents/CustomCodeBlock/CustomCodeBlock";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -24,8 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
     // Custom components
     ArticleImage: (props) => <ArticleImage props={props} />,
-    // CodeBlock: (props) => <pre>{props.children}</pre>,
-    CodeBlock: (props) => <CodeBlock props={props} />,
+    CustomCodeBlock: (props) => <CustomCodeBlock props={props} />,
     Subtitle: (props) => <Subtitle props={props} />,
 
     // Rest of the components

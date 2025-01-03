@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import React from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
-import styles from "./CodeBlock.module.scss";
+import styles from "./CustomCodeBlock.module.scss";
 
-interface CodeBlockProps {
+interface CustomCodeBlockProps {
   props: {
     children: string;
     code?: string;
@@ -12,17 +12,17 @@ interface CodeBlockProps {
   };
 }
 
-export const CodeBlock = ({ props }: CodeBlockProps) => {
+export const CustomCodeBlock = ({ props }: CustomCodeBlockProps) => {
   const code = props.code || props.children;
 
   return (
-    <pre className={classNames(styles.CodeBlock)}>
+    <pre className={classNames(styles.CustomCodeBlock)}>
       <CopyBlock
         text={code}
         language={props.language}
         showLineNumbers={props.showLineNumbers}
         theme={dracula}
-        codeBlock
+        codeBlock={true}
       />
     </pre>
   );
