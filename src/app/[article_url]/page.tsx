@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ArticlePage.module.scss";
 import { ArticleTitle } from "./ArticleTitle";
 import { ArticlePrimaryArea } from "./ArticlePrimaryArea";
-import { ArticleSecondaryArea } from "./ArticleSecondaryArea";
+// import { ArticleSecondaryArea } from "./ArticleSecondaryArea";
 import { ArticleModel } from "../lib/models";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
