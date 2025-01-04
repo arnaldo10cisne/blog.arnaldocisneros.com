@@ -24,23 +24,25 @@ export const PaginationComponent = ({
 }: PaginationComponentProps) => {
   return (
     <div className={styles.pagination}>
-      {currentPage === 1 ? null : (
-        <button
-          className={classNames(
-            styles.paginationButtonDirection,
-            FONT_MONTSERRAT.className,
-          )}
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-        >
-          <Image
-            src={RIGTH_ARROW_ICON}
-            alt={"arrow-icon"}
-            style={{ rotate: "180deg" }}
-          />{" "}
-          Previous
-        </button>
-      )}
+      <div className={classNames(styles.paginationButtonDirectionContainer)}>
+        {currentPage === 1 ? null : (
+          <button
+            className={classNames(
+              styles.paginationButtonDirection,
+              FONT_MONTSERRAT.className,
+            )}
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+          >
+            <Image
+              src={RIGTH_ARROW_ICON}
+              alt={"arrow-icon"}
+              style={{ rotate: "180deg" }}
+            />{" "}
+            Previous
+          </button>
+        )}
+      </div>
 
       {Array.from({ length: totalPages }, (_, i) => i + 1).map(
         (pageNumber: number) => (
@@ -59,18 +61,20 @@ export const PaginationComponent = ({
         ),
       )}
 
-      {currentPage === totalPages ? null : (
-        <button
-          className={classNames(
-            styles.paginationButtonDirection,
-            FONT_MONTSERRAT.className,
-          )}
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
-        >
-          Next <Image src={RIGTH_ARROW_ICON} alt={"arrow-icon"} />
-        </button>
-      )}
+      <div className={classNames(styles.paginationButtonDirectionContainer)}>
+        {currentPage === totalPages ? null : (
+          <button
+            className={classNames(
+              styles.paginationButtonDirection,
+              FONT_MONTSERRAT.className,
+            )}
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next <Image src={RIGTH_ARROW_ICON} alt={"arrow-icon"} />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
