@@ -46,6 +46,7 @@ export const LargeArticleList = ({
     };
 
     fetchArticles();
+    window.scrollTo({ top: 600, behavior: "smooth" });
   }, [currentPage, category?.type]);
 
   // Jump to a specific page
