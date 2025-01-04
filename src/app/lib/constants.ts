@@ -9,6 +9,11 @@ import GITHUB_ICON from "./assets/svg/github_icon.svg";
 import LINKEDIN_ICON from "./assets/svg/linkedin_logo.svg";
 import X_ICON from "./assets/svg/x_icon.svg";
 import GRABBAG_CATEGORY_ICON from "./assets/svg/grab-bag-icon-white.svg";
+import LIFESTYLE_CATEGORY_ICON from "./assets/svg/lifestyle-icon-white.svg";
+import GAMEDEV_CATEGORY_ICON from "./assets/svg/game-dev-icon-white.svg";
+import DEVDIARY_CATEGORY_ICON from "./assets/svg/dev-diary-icon-white.svg";
+import DEVELOPER_CATEGORY_ICON from "./assets/svg/developer-icon-white.svg";
+import CLOUD_CATEGORY_ICON from "./assets/svg/cloud-icon-white.svg";
 import BACKGROUND_IMAGE_MOCK from "./assets/mock-image.webp";
 
 export const HOME_LINK: NavigationLinkModel = {
@@ -87,7 +92,7 @@ export const CATEGORY_DEVELOPING: CategoryModel = {
   path: `developing`,
   label: "Developing",
   thumbnail: BACKGROUND_IMAGE_MOCK,
-  icon: GRABBAG_CATEGORY_ICON,
+  icon: DEVELOPER_CATEGORY_ICON,
 };
 
 export const CATEGORY_CLOUD: CategoryModel = {
@@ -96,7 +101,7 @@ export const CATEGORY_CLOUD: CategoryModel = {
   path: `cloud`,
   label: "Cloud",
   thumbnail: BACKGROUND_IMAGE_MOCK,
-  icon: GRABBAG_CATEGORY_ICON,
+  icon: CLOUD_CATEGORY_ICON,
 };
 
 export const CATEGORY_LIFESTYLE: CategoryModel = {
@@ -105,7 +110,7 @@ export const CATEGORY_LIFESTYLE: CategoryModel = {
   path: `lifestyle`,
   label: "Lifestyle",
   thumbnail: BACKGROUND_IMAGE_MOCK,
-  icon: GRABBAG_CATEGORY_ICON,
+  icon: LIFESTYLE_CATEGORY_ICON,
 };
 
 export const CATEGORY_GAMEDEV: CategoryModel = {
@@ -114,7 +119,7 @@ export const CATEGORY_GAMEDEV: CategoryModel = {
   path: `gamedev`,
   label: "Game Development",
   thumbnail: BACKGROUND_IMAGE_MOCK,
-  icon: GRABBAG_CATEGORY_ICON,
+  icon: GAMEDEV_CATEGORY_ICON,
 };
 
 export const CATEGORY_DEVDIARY: CategoryModel = {
@@ -123,7 +128,7 @@ export const CATEGORY_DEVDIARY: CategoryModel = {
   path: `dev-diary`,
   label: "Developer Diary",
   thumbnail: BACKGROUND_IMAGE_MOCK,
-  icon: GRABBAG_CATEGORY_ICON,
+  icon: DEVDIARY_CATEGORY_ICON,
 };
 
 export const CATEGORY_GRABBAG: CategoryModel = {
